@@ -48,7 +48,9 @@ import { BrowserModule } from '@angular/platform-browser'
     BrowserModule,
     NxButtonModule,
     ExternalScrollbarModule,
-    NxTableModule
+    NxTableModule,
+    NxIconModule,
+    NxLinkModule
   ],
   exports: [
     NgxSatSharedComponent, 

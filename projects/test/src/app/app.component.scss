@@ -19,3 +19,20 @@
         background-size: 100% auto;
     }
 }
+
+
+::ng-deep {
+    .desktop-only-pagination {
+        .nx-pagination__container {
+            margin: 12px 0 40px !important;
+        }
+    }
+}
+.load-more-button {
+    font-size: 14px;
+}
+@include screen-md-up {
+    .load-more {
+        display: none;
+    }
+}
