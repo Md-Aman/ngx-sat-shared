@@ -1,0 +1,162 @@
+<div class="w-1p5col">
+    <nx-link>
+        <a (click)="restartSearch()" class="std-tt-uppercase">
+            <nx-icon name="arrow-left"></nx-icon>
+            <!-- {{ 'NCN.ACTION.SEARCH_AGAIN' | translate }} -->
+            Search Again
+        </a>
+    </nx-link>
+
+    <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+        <nx-message nxContext="success" showIcon="true">
+            <ng-content select="[title]"></ng-content>
+        </nx-message>
+    </div>
+
+    <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+        <table class="key-value-table   customer-info-kvt">
+            <tbody>
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{'NCN.STEP3.CD.NAME' | translate }} -->
+                        Name
+                    </th>
+
+                    <td>
+                        {{ source.name }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.NRIC' | translate }} -->
+                        NRIC
+                    </th>
+
+                    <td>
+                        {{ source.idValue }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.NATIONALITY' | translate }} -->
+                        Nationality
+                    </th>
+
+                    <td>
+                        {{ source.countryname }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.GENDER' | translate }} -->
+                        Gender
+                    </th>
+
+                    <td>
+                        {{ source.gender }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.MARITAL' | translate }} -->
+                        Marital Status
+                    </th>
+
+                    <td>
+                        {{ source.marriedStatus }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.MOBILE' | translate }} -->
+                        Mobile No.
+                    </th>
+
+                    <td>
+                        {{ source.mobilePhone }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.EMAIL' | translate }} -->
+                        Email
+                    </th>
+
+                    <td>
+                        {{ source.email }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.ADDRESS' | translate }} -->
+                        Address
+                    </th>
+
+                    <td>
+                        {{ source.address }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.FIX_LN' | translate }} -->
+                        Fix No.
+                    </th>
+
+                    <td>
+                        {{ source.fixLine }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.FAX_NUM' | translate }} -->
+                        Fax No.
+                    </th>
+
+                    <td>
+                        {{ source.faxNumber }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+        <nx-message nxContext="info" showIcon="true">
+            <b>Please note:</b> You may select your preferred address. This will also change your fixed line no. and fax no.
+        </nx-message>
+    </div>
+
+    <form [formGroup]="customerInfoForm">
+        <nx-formfield nxLabel="Address">
+            <nx-dropdown formControlName="address">
+                <nx-dropdown-item nxValue="0">50, Jalan Barat, Barat Timur, 476666, Shah Alam, Selangor</nx-dropdown-item>
+                <nx-dropdown-item nxValue="1">11-1, Block A, Zenith Corporate Park, No. 1, SS7/26, Kelana Jaya, 47301, Petaling Jaya, Selangor</nx-dropdown-item>
+            </nx-dropdown>
+        </nx-formfield>
+
+        <nx-formfield nxLabel="Fixed Line No.">
+            <nx-dropdown formControlName="fixedLineNumber">
+                <nx-dropdown-item nxValue="0">03-12345678</nx-dropdown-item>
+                <nx-dropdown-item nxValue="1">03-87654321</nx-dropdown-item>
+            </nx-dropdown>
+        </nx-formfield>
+
+        <nx-formfield nxLabel="Fax No.">
+            <nx-dropdown formControlName="faxNumber">
+                <nx-dropdown-item nxValue="0">03-11223344</nx-dropdown-item>
+                <nx-dropdown-item nxValue="1">03-44332211</nx-dropdown-item>
+            </nx-dropdown>
+        </nx-formfield>
+    </form> -->
+</div>
+
+<br>

@@ -1,0 +1,97 @@
+<!-- <nx-link>
+    <a (click)="restartSearch()" class="std-tt-uppercase">
+        <nx-icon name="arrow-left"></nx-icon>
+        {{ 'NCN.ACTION.SEARCH_AGAIN' | translate }}
+    </a>
+</nx-link>
+
+<div class="std-mg-bottom-m std-mg-bottom-md-3m">
+    <nx-message nxContext="error" showIcon="true">
+        <ng-content select="[title]"></ng-content>
+    </nx-message>
+</div>
+
+<div class="std-mg-bottom-m std-mg-bottom-md-3m">
+    <table class="key-value-table">
+        <tbody>
+            <tr>
+                <th scope="row" class="key-value-table__key">
+                    {{ 'NCN.STEP3.NATIONALITY' | translate }}
+                </th>
+
+                <td>
+                    {{ nationality }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row" class="key-value-table__key">
+                    {{ idLabel }}
+                </th>
+
+                <td>
+                    {{ idValue }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="std-mg-bottom-m std-mg-bottom-md-3m">
+
+<form [formGroup]="customerInfoForm">
+    <h3 nxHeadline="subsection-xsmall">
+        {{ 'NCN.STEP3.HEADLINE_1' | translate }}
+    </h3>
+
+    <nx-expansion-panel [disabled]="accordionsAreDisabled" class="mobile-only-accordion">
+        <nx-expansion-panel-header>
+            <nx-expansion-panel-title>
+                {{ 'NCN.STEP3.TITLE_PI' | translate }}
+            </nx-expansion-panel-title>
+        </nx-expansion-panel-header>
+        <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.NAME' | translate }}">
+            <input nxInput formControlName="clientName">
+
+            <nx-error nxFormfieldError>
+                {{ 'NCN.STEP3.CD.ERR_NAME' | translate }}
+            </nx-error>
+        </nx-formfield>
+
+        <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.LONG_NAME' | translate }}">
+            <input nxInput formControlName="longName">
+        </nx-formfield> -->
+
+        <!-- If "Company" is selected, don't show Gender and Marital Status. -->
+
+        <!-- <nx-radio-group name="clientGender" formControlName="clientGender" class="std-radio-group">
+            <nx-label>{{ 'NCN.STEP3.CD.GENDER' | translate }}</nx-label>
+            <nx-radio nxValue="1" class="std-radio-button">Male</nx-radio>
+            <nx-radio nxValue="2" class="std-radio-button">Female</nx-radio>
+        </nx-radio-group>
+
+        <div class="std-mg-top-m std-mg-bottom-m std-mg-top-md-2m">
+            <nx-radio-group name="clientMaritalStatus" formControlName="clientMaritalStatus" class="std-radio-group">
+                <nx-label>{{ 'NCN.STEP3.CD.MARITAL' | translate }}</nx-label>
+                <nx-radio nxValue="1" class="std-radio-button">Single</nx-radio>
+                <nx-radio nxValue="2" class="std-radio-button">Married</nx-radio>
+                <nx-radio nxValue="3" class="std-radio-button">Divorced / Widowed</nx-radio>
+            </nx-radio-group>
+        </div>
+    </nx-expansion-panel>
+
+    <hr class="std-mg-bottom-m std-mg-bottom-md-3m std-mg-top-xs std-mg-top-md-m   hide-for-mobile">
+
+    <ncn-customer-partner-contact-details 
+        [parentForm]="customerInfoForm" 
+        [faxList]="faxList" 
+        [mobileList]="mobileCode" 
+        [flList]="flCode">
+    </ncn-customer-partner-contact-details>
+
+    <hr class="std-mg-bottom-m std-mg-bottom-md-3m std-mg-top-xs std-mg-top-md-m   hide-for-mobile">
+
+    <ncn-customer-partner-correspondence-details [parentForm]="customerInfoForm"></ncn-customer-partner-correspondence-details>
+</form>
+
+<br> -->

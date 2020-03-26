@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { NgxSatSharedModule } from 'ngx-sat-shared';
+import { NgxSatSharedModule } from 'projects/ngx-sat-shared/src/lib/ngx-sat-shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,7 @@ import { NgxSatSharedModule } from 'ngx-sat-shared';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSatSharedModule
+    NgxSatSharedModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
