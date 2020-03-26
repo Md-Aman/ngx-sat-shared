@@ -1,0 +1,33 @@
+/*-----------------------------------------------------------------------------
+    $ HR (Horizontal Ruler)
+-----------------------------------------------------------------------------*/
+
+hr {
+    border: 0;
+    border-top: 1px solid $grey-300;
+}
+@include screen-md-down {
+    .ecn-hr {
+        display: none;
+    }
+}
+@include screen-md-up {
+    .ecn-hr {
+        // margin-top: 30px;
+    }
+    .hr-before:before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #d9d9d9;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@include screen-md-down {
+    .hide-for-mobile {
+        display: none;
+    }
+}

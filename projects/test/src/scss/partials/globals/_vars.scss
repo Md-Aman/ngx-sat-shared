@@ -1,0 +1,255 @@
+//=============================================================================
+//  Variables
+//=============================================================================
+//
+//  $ Colors
+//  $ Easings
+//  $ Fonts
+//  $ Gutters
+//  $ Media
+//  $ Transitions
+//  $ Z-Index
+//
+//  $ Site Header
+//
+//=============================================================================
+//  $ Colors
+//=============================================================================
+
+//-- Primary --//
+$bright-blue:   #007AB3;
+$blue-light:     #0079B3;
+$blue:          #003781;
+$dark-blue:     #006192;
+$white:         #FFFFFF;
+$orange:        #F86200;
+$green:         #3DA556;
+
+//-- Secondary --//
+$grey-rich:             #5A5360;
+$grey-rich-light:       #D7D3D9;
+$grey-soft:             #D4CDCD;
+$grey-soft-light:       #EFE8E6;
+$grey-soft-lightest:    #F8F4F2;
+
+$purple-rich:           #5A3982;
+$purple-rich-light:     #DAD0E1;
+$purple-vibrant:        #8A679C;
+$purple-vibrant-light:  #E1CFEB;
+
+$olive-rich:            #5B5D30;
+$olive-rich-light:      #D4D5C8;
+
+$green-rich:            #407D71;
+$green-rich-2:          #A9C776;
+$green-rich-light:      #C3D8D4;
+$green-soft:            #C0DDBD;
+$green-soft-light:      #DFEEDE;
+$green-soft-lightest:   #EFF6EE;
+$green-vibrant:         #CCDD61;
+$green-vibrant-light:   #E3EBAF;
+
+$blue-rich:             #49648C;
+$blue-rich-light:       #CAD4DE;
+$blue-soft:             #CFE9EE;
+$blue-soft-light:       #E6F4F6;
+$blue-soft-lightest:    #F1F9FA;
+$blue-vibrant:          #96DCFA;
+$blue-vibrant-light:    #C1EBFB;
+
+$red-rich:              #B71E3F;
+$red-rich-light:        #F1C8D0;
+$red-soft:              #EECCD5;
+$red-soft-light:        #F6E5EA;
+$red-soft-lightest:     #FBF2F4;
+$red-vibrant:           #E4003A;
+$red-vibrant-light:     #F7C7C3;
+$red-ligt:              #D5002C;
+
+$petrol-rich:           #007D8C;
+$petrol-rich-light:     #B1DADD;
+
+$beige-soft:            #EBE1BF;
+$beige-soft-light:      #F5F0E0;
+$beige-soft-lightest:   #FAF7EF;
+
+$nude-soft:             #EACFC0;
+$nude-soft-light:       #F3E5DF;
+$nude-soft-lightest:    #F9F2EF;
+
+$mud-soft:              #DBD3BD;
+$mud-soft-light:        #EBE7DB;
+$mud-soft-lightest:     #F5F3ED;
+
+$turquoise-vibrant:     #7FE4E0;
+$turquoise-vibrant-light:#C3E8E7;
+
+$yellow-vibrant:        #FDD25C;
+$yellow-vibrant-light:  #FFE8B0;
+
+$orange-vibrant:        #FF934F;
+$orange-vibrant-light:  #F7CAAB;
+
+//-- Signal --//
+$c-error:   #DC3149;
+$c-success: #1E8927;
+$c-warning: #EFBE25;
+$c-info:    #496EBD;
+
+//-- common --//
+$grey-100:  #F5F5F5;
+$grey-200:  #ECECEC;
+$grey-300:  #D9D9D9;
+$grey-400:  #C2C2C2;
+$grey-500:  #999999;
+$grey-550:  #767676;
+$grey-600:  #5B5B5B;
+$grey-700:  #414141;
+$black:     #000000;
+
+//=============================================================================
+//  $ Easings
+//-----------------------------------------------------------------------------
+//
+//  Easings are from http://easings.net/.
+//
+//  The `$ease-XXX-power#` naming convention is inspired by GreenSock: "Using
+//  a numeric approach like Power2 instead of Quart makes experimenting easier
+//  and the code reads more intuitively."
+//
+//=============================================================================
+
+$ease-out-power4: cubic-bezier(0.19, 1, 0.22, 1);             // Ease Out Expo
+$ease-out-power3: cubic-bezier(0.165, 0.84, 0.44, 1);         // Ease Out Quart
+$ease-out-power2: cubic-bezier(0.215, 0.61, 0.355, 1);        // Ease Out Cubic
+$ease-out-power1: cubic-bezier(0.25, 0.46, 0.45, 0.94);       // Ease Out Quad
+
+$ease-in-power4: cubic-bezier(0.95, 0.05, 0.795, 0.035);      // Ease In Expo
+$ease-in-power3: cubic-bezier(0.895, 0.03, 0.685, 0.22);      // Ease In Quart
+$ease-in-power2: cubic-bezier(0.55, 0.055, 0.675, 0.19);      // Ease In Cubic
+$ease-in-power1: cubic-bezier(0.55, 0.085, 0.68, 0.53);;      // Ease In Quad
+
+$ease-in-out-power4: cubic-bezier(1, 0, 0, 1);                // Ease In Out Expo
+$ease-in-out-power3: cubic-bezier(0.77, 0, 0.175, 1);         // Ease In Out Quart
+$ease-in-out-power2: cubic-bezier(0.645, 0.045, 0.355, 1);    // Ease In Out Cubic
+$ease-in-out-power1: cubic-bezier(0.455, 0.03, 0.515, 0.955); // Ease In Out Quad
+
+//=============================================================================
+//  $ Fonts
+//=============================================================================
+
+$ff-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$ff-alpha: 'Georgia', #{$ff-base};
+
+//=============================================================================
+//  $ Gutters
+//=============================================================================
+
+$gutter: (
+    mb:16px,
+    pc:32px
+);
+
+//=============================================================================
+//  $ Media
+//-----------------------------------------------------------------------------
+//
+//  Glossary:
+//      - us = Ultra Small
+//      - xs = Extra Small
+//      - sm = Small
+//      - md = Medium
+//      - lg = Large
+//      - xl = Extra Large
+//      - ul = Ultra Large
+//      - bp = Breakpoint
+//      - dn = Down
+//
+//  So, `$bp-sm-dn` = `breakpoint-small-down`.
+//
+//  To use a single breakpoint variable:
+//
+//      @media ($bp-xs) { ... }
+//
+//  To use multiple breakpoint variables:
+//
+//      @media ($bp-xs) and ($bp-sm-dn) { ... }
+//
+//  To use a breakpoint variable with a custom breakpoint:
+//
+//      @media ($bp-xs) and (min-height: 525px) { ... }
+//
+//=============================================================================
+
+$media-us-width: 320px;
+$media-xs-width: 480px;
+$media-sm-width: 640px;
+$media-md-width: 800px;
+$media-lg-width: 1024px;
+$media-xl-width: 1280px;
+$media-ul-width: 1440px;
+
+$bp-xs: 'min-width: #{$media-xs-width}';
+$bp-sm: 'min-width: #{$media-sm-width}';
+$bp-md: 'min-width: #{$media-md-width}';
+$bp-lg: 'min-width: #{$media-lg-width}';
+$bp-xl: 'min-width: #{$media-xl-width}';
+$bp-ul: 'min-width: #{$media-ul-width}';
+
+$bp-xs-dn: 'max-width: #{$media-xs-width - 0.02}';
+$bp-sm-dn: 'max-width: #{$media-sm-width - 0.02}';
+$bp-md-dn: 'max-width: #{$media-md-width - 0.02}';
+$bp-lg-dn: 'max-width: #{$media-lg-width - 0.02}';
+$bp-xl-dn: 'max-width: #{$media-xl-width - 0.02}';
+$bp-ul-dn: 'max-width: #{$media-ul-width - 0.02}';
+
+$bp-xs-sm: '#{$bp-xs}) and (#{$bp-sm-dn}';
+$bp-xs-md: '#{$bp-xs}) and (#{$bp-md-dn}';
+$bp-xs-lg: '#{$bp-xs}) and (#{$bp-lg-dn}';
+$bp-xs-xl: '#{$bp-xs}) and (#{$bp-xl-dn}';
+$bp-xs-ul: '#{$bp-xs}) and (#{$bp-ul-dn}';
+
+$bp-sm-md: '#{$bp-sm}) and (#{$bp-md-dn}';
+$bp-sm-lg: '#{$bp-sm}) and (#{$bp-lg-dn}';
+$bp-sm-xl: '#{$bp-sm}) and (#{$bp-xl-dn}';
+$bp-sm-ul: '#{$bp-sm}) and (#{$bp-ul-dn}';
+
+$bp-md-lg: '#{$bp-md}) and (#{$bp-lg-dn}';
+$bp-md-xl: '#{$bp-md}) and (#{$bp-xl-dn}';
+$bp-md-ul: '#{$bp-md}) and (#{$bp-ul-dn}';
+
+$bp-lg-xl: '#{$bp-lg}) and (#{$bp-xl-dn}';
+$bp-lg-ul: '#{$bp-lg}) and (#{$bp-ul-dn}';
+
+$bp-xl-ul: '#{$bp-xl}) and (#{$bp-ul-dn}';
+
+$bp-desktop-nav: $bp-md;
+$bp-mobile-nav:  $bp-md-dn;
+
+//=============================================================================
+//  $ Transitions
+//=============================================================================
+
+$transition-duration: 0.4s;
+$transition-easing: $ease-out-power4;
+
+$smooth-transition-duration: 0.6s;
+$smooth-transition-easing: $ease-out-power1;
+
+//=============================================================================
+//  $ Site Header
+//=============================================================================
+
+$site-header-height-mobile: 102px;
+$site-header-height-desktop: 122px;
+
+//=============================================================================
+//  $ Z-Index
+//-----------------------------------------------------------------------------
+//
+//  Setup all z-indices here so that it's easy to have an overview of the
+//  layers throughout the entire site.
+//
+//=============================================================================
+
+$zi-header: 10;

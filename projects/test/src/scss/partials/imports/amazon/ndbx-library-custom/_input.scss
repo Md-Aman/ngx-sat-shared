@@ -1,0 +1,150 @@
+.nx-formfield{
+	.nx-formfield__input{
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.nx-formfield__wrapper{
+		padding-bottom: 15px;
+
+
+	}
+
+	.nx-formfield__appendix{
+
+		//tooltip
+		.nx-icon--info-circle{
+			display: none;
+		}
+
+		&:hover{
+			.nx-icon--info-circle{
+				display: block;
+			}
+
+
+			.nx-icon--info-circle-o{
+				display: none;
+			}
+		}
+
+		//validated
+		.nx-icon--check-circle{
+			color:$c-success;
+		}
+	}
+
+	&.flush-pb--{
+		.nx-formfield__wrapper{
+			padding-bottom: 0px;
+		}
+	}
+}
+
+@include screen-sm-up {
+	.nx-formfield .nx-formfield__input{
+		font-size: 18px;
+	}
+}
+
+@include screen-md-up {
+	.nx-formfield{
+		font-size: 20px;
+		position: relative;
+
+		.nx-formfield__input{
+			font-size: 20px;
+		}
+
+		.nx-formfield__wrapper{
+			padding-bottom: 20px;
+		}
+
+		&:not(.default-icon-position--){
+			.nx-formfield__appendix{
+				position: absolute;
+				right: -30px;
+				top:5px;
+			}
+		}
+	}
+}
+
+/*---- Radio Buttons ----*/
+
+[class^="nx-radio-button"]:nth-child(n) {
+	.nx-radio__label:nth-child(n):nth-child(n) {
+		font-size: 14px;
+	}
+}
+
+[class^="nx-label"]:nth-child(n) {
+	font-size: 14px;
+}
+
+@include screen-sm-up {
+	[class^="nx-radio-button"]:nth-child(n) {
+		.nx-radio__label:nth-child(n):nth-child(n) {
+			font-size: 16px;
+		}
+	}
+
+	[class^="nx-label"]:nth-child(n) {
+		font-size: 16px;
+	}
+}
+
+@include screen-md-up {
+	[class^="nx-radio-button"]:nth-child(n) {
+		.nx-radio__label:nth-child(n):nth-child(n) {
+			font-size: 18px;
+		}
+	}
+
+	[class^="nx-label"]:nth-child(n) {
+		font-size: 18px;
+	}
+}
+
+.nx-radio-group__controls{
+	.d-inline--{
+		> nx-radio{
+			display: inline-block;
+
+			&:not(:first-child){
+				padding-left: 30px;
+			}
+		}
+	}
+}
+
+/*---------input code----------*/
+
+// [class^="code-input-btn"]:nth-child(n) {
+// 	.nx-code-input__label {
+// 		width: 20%;
+// 	}
+// }
+
+.code-input {
+	text-align: center;
+}
+	[class^="code-input-field"]:nth-child(n) {
+		&.length-6--{
+			.nx-code-input__field {
+				width: calc(16.66% - 8px);
+			}
+		}
+
+		&.length-4--{
+			.nx-code-input__field {
+				width: calc(25% - 8px);
+			}
+		}
+	}
+
+	.nx-code-input--gap:nth-child(n) {
+		&:nth-child(n) {
+			margin-left: 4px;
+		}
+	}

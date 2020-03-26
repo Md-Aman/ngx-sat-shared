@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------------
+    $ Headlines
+-----------------------------------------------------------------------------*/
+
+.nx-heading--subsection-small:nth-child(n):nth-child(n),
+.nx-heading--subsection-xsmall:nth-child(n):nth-child(n) {
+    font-weight: 600;
+    line-height: 1.2;
+}
+.flush-mb--[class*="nx-heading--"]:nth-child(n) {
+    margin-bottom: 0;
+}
+.fw-regular--[class*="nx-heading--"]:nth-child(n) {
+    font-weight: 400;
+}
+
+@include screen-sm-down {
+    .nx-heading--section:nth-child(n):nth-child(n) {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+}

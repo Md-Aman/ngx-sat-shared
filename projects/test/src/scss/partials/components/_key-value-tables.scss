@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------------
+    $ Key Value Tables
+-----------------------------------------------------------------------------*/
+
+.key-value-table {
+    font-size: 15px;
+
+    > * > tr {
+        > th,
+        > td {
+            padding-top: 2px;
+        }
+        &:first-child {
+            > th,
+            > td {
+                padding-top: 0;
+            }
+        }
+    }
+}
+    .key-value-table__key {
+        vertical-align: top;
+        padding-right: 5px;
+        font-weight: normal;
+        text-align: left;
+    }
+    .data-value-table{
+        vertical-align: top;
+        
+        &:before{
+            padding-right: 10px;        
+            content: ':';
+        }
+    }

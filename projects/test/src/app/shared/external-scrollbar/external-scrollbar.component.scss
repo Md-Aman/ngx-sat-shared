@@ -1,0 +1,23 @@
+@import '../../../scss/globals';
+
+.external-scrollbar {
+    height: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    @include custom-scrollbar;
+}
+    .external-scrollbar__inner {
+        height: 1px;
+    }
+
+@include screen-md-down {
+    .desktop-message {
+        display: none;
+    }
+}
+
+@include screen-md-up {
+    .mobile-message {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+/*-----------------------------------------------------------------------------
+    $ Steps Page Layout
+-----------------------------------------------------------------------------*/
+
+.steps-page-layout__page {
+    margin-top: 50px;
+}
+
+@include screen-lg-up {
+    .steps-page-layout {
+        display: flex;
+        align-items: flex-start;
+    }
+        .steps-page-layout__steps {
+            width: 220px;
+            padding-right: 60px;
+            border-right: 1px solid $grey-400;
+        }
+        .steps-page-layout__page {
+            width: calc(100% - 220px);
+            padding-left: 60px;
+            margin-top: 0;
+            flex: 1 1 auto;
+        }
+}

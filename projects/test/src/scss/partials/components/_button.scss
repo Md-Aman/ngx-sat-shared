@@ -1,0 +1,56 @@
+.dashboard-filter-button {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: unset !important;
+    color: $grey-700 !important;
+    padding: 0 !important;
+    &:hover {
+        background: none !important;
+    }
+}
+@include screen-md-down {
+    .dashboard-filter-button {
+        font-size: 20px !important;
+        margin-bottom: 35px !important;
+        .nx-button__content-wrapper{
+            padding-left:10px;
+        nx-icon:before {
+            font-size: 29px;
+            top: 0px;
+            left: -7px;
+            position: relative;
+        }
+        }
+    }
+    .filter-buttons {
+        padding: 16px 0 !important;
+    }
+}
+.ecn-modal-button{
+    min-width: 214.5px;
+    margin-bottom: 0!important;
+}
+.export-frame {
+    position: relative;
+    @include screen-md-down {
+        text-align: center;
+        padding-bottom: 30px;
+
+    }
+    .export-button {
+        @include screen-md-up {
+            position: absolute;
+            right: 0;
+            top: -10px;
+        }
+        font-size: 12px;
+        color: #006192;
+        font-weight: 700;
+        nx-icon {
+            color: #1e8927;
+            position: relative;
+            top: 6px;
+            margin-right: 5px;
+        }
+    }
+}

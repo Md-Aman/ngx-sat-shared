@@ -1,0 +1,113 @@
+
+.key-val-block{
+    display: block;
+    width: 100%;
+    color: $grey-700;
+
+    &.inline--{
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+    }
+
+    &.break-word--{
+        .key-val-block__value{
+            word-break: break-all;
+        }
+    }
+
+    &.tool-tips--{
+        .key-val-block__key{
+            padding-right: 25px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .key-val-block__tooltip{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: -2px;
+            font-size: 18px;
+            color: $dark-blue;
+            .nx-icon--info-circle{
+                display: none;
+            }
+
+            &:hover{
+                .nx-icon--info-circle{
+                    display: block;
+                }
+
+                .nx-icon--info-circle-o{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.key-val-block__tooltip{
+    display: none;
+}
+
+.key-val-block__key{
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    margin-top: -2px;
+    padding-bottom: 3px;
+    line-height: 15px;
+}
+
+.key-val-block__value{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+
+@include screen-sm-up {
+    .key-val-block__value{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .key-val-block__key{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@include screen-md-up {
+    .key-val-block__value{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .key-val-block.single-line--{
+        width: 100%;
+        padding-bottom: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: columns;
+
+        .key-val-block__value,
+        .key-val-block__key{
+            display: block;
+            width: 50%;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: .2px;
+        }
+
+        .key-val-block__value{
+            font-weight: 700;
+            text-align: right;
+        }
+    }
+}
+

@@ -1,0 +1,36 @@
+.paragraph-info {
+    font-size: 16px;
+
+    @include screen-md-down {
+        color: #767676;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    span {
+        @include screen-md-down {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        color: #414141;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+@include screen-md-up {
+    .paragraph-info {
+        p {
+            margin-top: 0;
+        }
+    }
+}
+@include screen-md-down {
+    .paragraph-info {
+        .edit-info-mobile {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div [ngStyle]="{ 'display': (canScroll) ? 'block' : 'none' }">
+    <span class="mobile-message">
+        Swipe to view more
+    </span>
+
+    <span class="desktop-message">
+        Scroll right to view more
+    </span>
+
+    <div class="external-scrollbar" (scroll)="syncScroll()" #scrollbar>
+        <div class="external-scrollbar__inner" [ngStyle]="{ width: scrollWidth + 'px' }"></div>
+    </div>
+</div>

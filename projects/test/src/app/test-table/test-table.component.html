@@ -1,0 +1,133 @@
+<div class="std-ta-left std-ta-md-right">
+    <button nxButton='tertiary small' (click)="showSummaryFiltersForm=!showSummaryFiltersForm" class="dashboard-filter-button">
+        <nx-icon name="filter" class="nx-margin-right-2xs"></nx-icon> 'DASHBOARD.FILTER' 
+    </button>
+</div>
+
+<!-- <dashboard-filters *ngIf="showSummaryFiltersForm" [cnType]="cnTypeList$ | async" [status]="cnStatusList$ | async" [criteria]="cnCriteriaList$ | async"
+    (search)="searchSummary($event)">
+</dashboard-filters> -->
+
+<external-scrollbar targetSyncScroll="dashboardTable" [targetBaseWidth]="tableHolder"></external-scrollbar>
+
+<div class="table-holder   dashboard-table-holder" #tableHolder syncScroll="dashboardTable">
+    <table nxTable nxSort zebra (sortChange)="sortTable($event, 'table')" #table>
+        <thead>
+            <tr nxTableRow>
+                <th nxHeaderCell nxSortHeaderCell="cnoteDate">Isuue Date</th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteNo">cnote No </th>
+                <th nxHeaderCell nxSortHeaderCell="agentCode">agent Code </th>
+                <th nxHeaderCell nxSortHeaderCell="name">name </th>
+                <th nxHeaderCell nxSortHeaderCell="policyNo">policy No </th>
+                <th nxHeaderCell nxSortHeaderCell="productName">product Name </th>
+                <th nxHeaderCell nxSortHeaderCell="insuredName" style="min-width: 200px;">insured Name </th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteType" style="min-width: 130px;">cnote Type </th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteStatus">cnote Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr selectable nxTableRow
+            *ngFor="let item of summaryList | slice: (curpage * perPage) - perPage :curpage * perPage" 
+            (click)="coverNoteDetails(item.contractId)">
+                <td nxTableCell>{{ item.cnoteDate | date: 'dd/MM/yyyy' }}</td>
+                <td nxTableCell>{{ item.cnoteNo }}</td>
+                <td nxTableCell>{{ item.mkagAgent.agentCode }}</td>
+                <td nxTableCell>{{ item.mkagAgent.name }}</td>
+                <td nxTableCell>{{ item.cnoteType == "ENDT"? item.endtNo: item.policyNo}} </td>
+                <td nxTableCell>{{ item.productName }}</td>
+                <td nxTableCell>{{ item.clientPartner.clientName }}</td>
+                <td nxTableCell>{{ item.cnoteType }}</td>
+                <td nxTableCell>
+                    {{item.cnoteStatus}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="fixed-table-holder   dashboard-table-holder" [class.active--]="tableHeaderIsFixed" [class.absolute--]="tableHeaderIsAbsolute"
+    [ngStyle]="{
+        'width': fixedTableHeaderHolderWidth + 'px',
+        'height': fixedTableHeaderHeight + 'px',
+        'top': siteHeaderHeight + 'px',
+        'left': fixedTableHeaderLeft + 'px',
+        'margin-top': -fixedTableHeaderHeight + 'px'
+    }" syncScroll="dashboardTable">
+    <table nxTable nxSort zebra class="dashboard-table summary-table" (sortChange)="sortTable($event, 'fixedTable')" [ngStyle]="{
+            'width': fixedTableHeaderWidth + 'px'
+        }" #fixedTableHeader>
+        <thead>
+            <tr nxTableRow>
+                <th nxHeaderCell nxSortHeaderCell="cnoteDate" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[0] + 'px' }">
+                    Isuue Date 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteNo" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[1] + 'px' }">
+                    Cnote No 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="agentCode" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[2] + 'px' }">
+                    agent code 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="name" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[3] + 'px' }">
+                    name 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="policyNo" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[4] + 'px' }">
+                    policy no 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="productName" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[5] + 'px' }">
+                    product name
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="insuredName" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[6] + 'px' }" 
+                    style="width: 200px;">
+                    INsured Name 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteType" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[7] + 'px' }"
+                    style="width: 130px;">
+                    c note type
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteStatus" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[8] + 'px' }">
+                    cnote Status
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div class="no-res-found" *ngIf="summaryList.length == 0">
+    <p> No Result Found </p>
+</div>
+
+<!-- <div class="desktop-only-pagination">
+    <form [formGroup]="pageFilterForm">
+        <div nxRow>
+            <div nxCol="6" class="items-per-page" *ngIf="summaryList.length > 5 && isFiltered">
+                'DASHBOARD.TABLE.SHOW' | translate
+                <nx-formfield class="w-88px std-pd-top-10">
+                    <nx-dropdown formControlName="perPage">
+                        <nx-dropdown-item *ngFor="let item of itemsPerPageSelections" [nxValue]="item"></nx-dropdown-item>
+                    </nx-dropdown>
+                </nx-formfield>
+                'DASHBOARD.TABLE.RESULTS_PER_PAGE' 
+            </div>
+
+
+            <div nxCol="6" class="d-flex justify-content-flex-end" *ngIf="summaryList.length > 5 && isFiltered">
+                <nx-pagination class="std-pd-top-10" [nxCount]="summaryList.length" nxType="advanced" [nxPage]="curpage" [nxPerPage]="perPage"
+                    (nxGoPrev)="prevPage()" (nxGoNext)="nextPage()" (nxGoPage)="goToPage($event)">
+                </nx-pagination>
+            </div>
+        </div>
+    </form>
+</div> -->
+<div class="std-ta-center std-pd-bottom-3m std-pd-top-s load-more">
+    <nx-link>
+        <a routerLink='/documentation' class="load-more-button">'DASHBOARD.LOAD_MORE'</a>
+    </nx-link>
+</div>

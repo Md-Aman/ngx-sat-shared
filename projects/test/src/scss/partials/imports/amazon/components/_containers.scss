@@ -1,0 +1,22 @@
+//==== Container ====//
+.container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: map-get($gutter, "mb");
+    padding-right: map-get($gutter, "mb");
+}
+
+@include screen-md-up {
+    .container,.container-md {
+        padding-left: map-get($gutter, "pc");
+        padding-right: map-get($gutter, "pc");
+    }
+}
+
+@include screen-xl-up {
+    .container,.container-md,.container-lg {
+        max-width: 1184px;
+        margin: 0 auto;
+    }
+}
