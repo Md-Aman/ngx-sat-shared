@@ -1,0 +1,29 @@
+.nx-checkbox{
+	&.std-fs-xs{
+		.nx-checkbox__label{
+			font-size: 12px;
+			line-height: 1.33
+		}
+	}
+}
+
+@include screen-sm-up {
+	.nx-checkbox{
+		&.std-fs-xs{
+			.nx-checkbox__label{
+				font-size: 14px;
+			}
+		}
+	}
+
+}
+
+@include screen-md-up {
+	.nx-checkbox{
+		&.std-fs-xs{
+			.nx-checkbox__label{
+				font-size: 16px;
+			}
+		}
+	}
+}

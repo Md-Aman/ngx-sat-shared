@@ -1,0 +1,67 @@
+/*-----------------------------------------------------------------------------
+    $ Inputs
+-----------------------------------------------------------------------------*/
+
+.nx-formfield {
+    .nx-formfield__wrapper {
+        padding-bottom: 30px;
+    }
+    .nx-formfield__flexfield,
+    .nx-formfield__input {
+        font-weight: 300;
+    }
+    .nx-formfield__label {
+        font-size: inherit;
+    }
+    .nx-formfield__appendix {
+        align-items: flex-start;
+    }
+    .nx-formfield__hints {
+        margin-bottom: -10px;
+    }
+    .nx-formfield__prefix {
+        font-size: 16px;
+
+        @include screen-sm-up {
+            font-size: 18px;
+        }
+
+        @include screen-md-up {
+            font-size: 20px;
+        }
+    }
+}
+
+//---- Textareas ----//
+
+textarea.c-input {
+    min-height: 56px;
+    resize: none;
+}
+
+//---- Radios ----//
+
+.nx-radio-group__label {
+    [class^="nx-label--"]:nth-child(n) {
+        line-height: 1;
+    }
+    .nx-label__content:nth-child(n) {
+        font-size: 16px;
+    }
+}
+
+.nx-radio-group__controls:nth-child(n) .nx-radio__label:nth-child(n):nth-child(n) {
+    font-size: 16px;
+
+    @include screen-sm-up {
+        font-size: 18px;
+    }
+
+    @include screen-md-up {
+        font-size: 20px;
+    }
+}
+
+.cdk-overlay-connected-position-bounding-box {
+    max-width: 500px;
+}

@@ -1,0 +1,73 @@
+
+/*---- Imports ----*/
+
+@import '@allianz/ndbx-styles/dist/patternlab-minimal.css';
+@import '@angular/cdk/overlay-prebuilt.css';
+@import "@allianz/ngx-ndbx/css/utilities.css";
+
+/*---- Globals ----*/
+
+@import 'partials/globals/functions';
+@import 'partials/globals/mixins';
+@import 'partials/globals/vars';
+@import 'partials/globals/fonts';
+@import 'partials/globals/starters';
+
+/*---- Amazon NDBX ----*/
+
+@import 'partials/imports/amazon/ndbx-library-custom/button';
+// @import 'partials/imports/amazon/ndbx-library-custom/checkbox';
+@import 'partials/imports/amazon/ndbx-library-custom/dropdown';
+@import 'partials/imports/amazon/ndbx-library-custom/headline';
+@import 'partials/imports/amazon/ndbx-library-custom/link';
+@import 'partials/imports/amazon/ndbx-library-custom/input';
+@import 'partials/imports/amazon/ndbx-library-custom/message';
+@import 'partials/imports/amazon/ndbx-library-custom/modal';
+// @import 'partials/imports/amazon/ndbx-library-custom/tabs';
+
+/*---- Amazon Components ----*/
+
+@import 'partials/imports/amazon/components/containers';
+@import 'partials/imports/amazon/components/flex-wrapper';
+@import 'partials/imports/amazon/components/key-val-block';
+@import 'partials/imports/amazon/components/margin';
+@import 'partials/imports/amazon/components/padding';
+@import 'partials/imports/amazon/components/text-alignment';
+
+/*---- ECN NDBX ----*/
+
+@import 'partials/ndbx-library-custom/buttons';
+@import 'partials/ndbx-library-custom/headline';
+@import 'partials/ndbx-library-custom/input';
+@import 'partials/ndbx-library-custom/message';
+@import 'partials/ndbx-library-custom/modal';
+@import 'partials/ndbx-library-custom/table';
+@import 'partials/ndbx-library-custom/copy';
+@import 'partials/ndbx-library-custom/note';
+
+/*---- ECN Components ----*/
+
+@import 'partials/components/cards';
+@import 'partials/components/hr';
+@import 'partials/components/inline-block-groups';
+@import 'partials/components/key-value-tables';
+@import 'partials/components/radio-button';
+@import 'partials/components/sections';
+@import 'partials/components/steps-page-layout';
+@import 'partials/components/accordion';
+@import 'partials/components/headline';
+@import 'partials/components/pagination';
+@import 'partials/components/flex';
+@import 'partials/components/button';
+@import 'partials/components/table';
+@import 'partials/components/paragraph';
+@import 'partials/components/modal';
+
+/*---- ECN Utilities ----*/
+
+@import 'partials/utilities/colors';
+@import 'partials/utilities/vertical-align';
+@import 'partials/utilities/text-transform';
+@import 'partials/utilities/widths';
+// @import 'partials/components/utilities';
+

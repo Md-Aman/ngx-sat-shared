@@ -1,0 +1,21 @@
+.nx-button--block{
+	&.flush-mg--{
+		margin:0;
+	}
+}
+
+.inline-block-group__elem .nx-button--small:nth-child(n) {
+	width: 100%;
+	display: block;
+}
+
+
+@include screen-md-down {
+	.nx-button--block:nth-child(n) {
+		&.small-- {
+			padding: 10px 30px;
+			font-size: 16px;
+			min-height: 48px;
+		}
+	}
+}

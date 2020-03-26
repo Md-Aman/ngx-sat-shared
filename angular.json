@@ -63,7 +63,7 @@
               "projects/test/src/assets"
             ],
             "styles": [
-              "projects/test/src/styles.scss"
+              "projects/test/src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -128,7 +128,7 @@
               "projects/test/src/assets"
             ],
             "styles": [
-              "projects/test/src/styles.scss"
+              "projects/test/src/scss/styles.scss"
             ],
             "scripts": []
           }

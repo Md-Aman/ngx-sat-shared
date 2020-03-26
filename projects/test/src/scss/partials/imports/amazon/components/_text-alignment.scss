@@ -1,0 +1,51 @@
+//==== Text Alignment ====//
+.std-ta-left{
+    text-align: left;
+}
+.std-ta-center{
+    text-align: center;
+}
+.std-ta-right{
+    text-align: right;
+    text-align: -webkit-right;
+}
+
+
+@include screen-sm-up  {
+    .std-ta-sm-left{
+        text-align: left;
+    }
+    .std-ta-sm-center{
+        text-align: center;
+    }
+    .std-ta-sm-right{
+        text-align: right;
+        text-align: -webkit-right;
+    }
+}
+
+@include screen-md-up  {
+    .std-ta-md-left{
+        text-align: left;
+    }
+    .std-ta-md-center{
+        text-align: center;
+    }
+    .std-ta-md-right{
+        text-align: right;
+        text-align: -webkit-right;
+    }
+}
+
+@include screen-lg-up  {
+    .std-ta-lg-left{
+        text-align: left;
+    }
+    .std-ta-lg-center{
+        text-align: center;
+    }
+    .std-ta-lg-right{
+        text-align: right;
+        text-align: -webkit-right;
+    }
+}

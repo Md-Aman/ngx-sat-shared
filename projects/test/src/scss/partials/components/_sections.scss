@@ -1,0 +1,38 @@
+/*-----------------------------------------------------------------------------
+    $ Sections
+-----------------------------------------------------------------------------*/
+
+.section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+@include screen-sm-up {
+    .section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+//---- Compact sections ----//
+
+.compact--.section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@include screen-sm-up {
+    .compact--.section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+//---- Flush sections ----//
+
+.flush-top--.section {
+    padding-top: 0;
+}
+.flush-bottom--.section {
+    padding-bottom: 0;
+}

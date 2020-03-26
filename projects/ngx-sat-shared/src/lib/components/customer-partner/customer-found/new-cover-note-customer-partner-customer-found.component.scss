@@ -1,21 +1,21 @@
-// @import "../../../../../scss/globals";
+@import "../../../../../../test/src/scss/globals.scss";
 
-// @include screen-md-down {
-//     .hide-for-mobile {
-//         display: none;
-//     }
-// }
+@include screen-md-down {
+    .hide-for-mobile {
+        display: none;
+    }
+}
 
-// @include screen-md-up {
-//     .nx-expansion-panel__header-title {
-//         display: none;
-//     }
-// }
+@include screen-md-up {
+    .nx-expansion-panel__header-title {
+        display: none;
+    }
+}
 
-// .customer-info-kvt {
-//     > * > tr {
-//         > th:first-child {
-//             width: 190px;
-//         }
-//     }
-// }
+.customer-info-kvt {
+    > * > tr {
+        > th:first-child {
+            width: 190px;
+        }
+    }
+}

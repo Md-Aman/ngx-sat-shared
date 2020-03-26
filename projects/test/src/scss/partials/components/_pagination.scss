@@ -1,0 +1,18 @@
+@include screen-md-down {
+    .desktop-only-pagination{
+        display: none;
+    }
+}
+.items-per-page {
+    font-size: 16px;
+    .nx-formfield__wrapper {
+        padding-top: 8px;
+    }
+    .nx-formfield {
+        display: inline-block;
+        .nx-formfield__input {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}

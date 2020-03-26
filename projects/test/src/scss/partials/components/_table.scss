@@ -1,0 +1,337 @@
+.table-holder {
+    overflow: auto;
+    @include custom-scrollbar;
+}
+
+.mobile-table-button {
+    display: none;
+}
+
+/*---- Dashboard table ----*/
+
+.dashboard-table-holder {
+    &.table-holder {
+        margin-bottom: 20px;
+    }
+        .nx-header-cell {
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 14px;
+            white-space: normal;
+        }
+            .nx-sort-header__focus-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                line-height: 18px;
+            }
+        .nx-table-cell {
+            font-size: 14px;
+            width: 15%;
+            padding: 10px 7px;
+            line-height: 18px;
+        }
+}
+
+/*---- Drafts table ----*/
+
+.drafts-table {
+    td {
+        width: 10.6%;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            width: 15.6%;
+        }
+        &:nth-child(6) {
+            width: 15.2%;
+        }
+        &:nth-child(7) {
+            width: 11.2%;
+        }
+    }
+}
+
+.drafts-responsive-table {
+    overflow-x: hidden;
+
+    th:nth-of-type(2) {
+        width: 19%;
+    }
+}
+
+@include screen-md-down {
+    .drafts-table-holder {
+        overflow: hidden;
+
+        &.fixed-table-holder {
+            display: none;
+        }
+    }
+    .responsive-table {
+        border-bottom: none !important;
+        padding-bottom: 5px;
+        width: calc(100% + 32px) !important;
+        margin-left: -16px;
+        .mobile-table-button {
+            display: block;
+        }
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        .mobile-table-button {
+            button {
+                padding: 16px 0;
+            }
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            // margin: 0 0 1rem 0;
+            border-bottom: 1px solid $grey-300;
+            padding-top: 45px;
+            padding-bottom: 21px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &:first-child {
+                border-top: 1px solid $grey-300;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        tr:nth-child(even) {
+            background: $white !important;
+        }
+
+        .nx-table-cell:nth-child(n) {
+            /* Behave  like a "row" */
+            border: none;
+            position: relative;
+            border: none !important;
+            padding-left: 50% !important;
+            width: 100%;
+            min-width: 269px;
+            padding-top: 0;
+            padding-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .nx-table-cell:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            left: 0;
+            width: 48%;
+            min-width: 133px;
+            padding-right: 0;
+            white-space: normal;
+        }
+        .nx-table-cell:after {
+            content: ":";
+            left: 48%;
+            position: absolute;
+            top: 0;
+        }
+    }
+    .drafts-responsive-table {
+        .nx-table-row--selectable {
+            cursor: default !important;
+            &:hover,
+            &:active {
+                background: none !important;
+            }
+        }
+        td:nth-of-type(1):before {
+            content: "Date";
+        }
+        td:nth-of-type(2):before {
+            content: "Draft Reference No.";
+        }
+        td:nth-of-type(3):before {
+            content: "Agent Code";
+        }
+        td:nth-of-type(4):before {
+            content: "Agent Name";
+        }
+        td:nth-of-type(5):before {
+            content: "Product";
+        }
+        td:nth-of-type(6):before {
+            content: "Name";
+        }
+        td:nth-of-type(7):before {
+            content: "Cover Note Type";
+        }
+
+        td:nth-of-type(8) {
+            margin-top: 20px;
+        }
+        td:nth-of-type(8):before {
+            content: "Progress";
+        }
+        td:nth-of-type(8):after {
+            content: "";
+        }
+        td:nth-of-type(8) {
+            display: block;
+            height: 87px;
+        }
+    }
+}
+
+/*---- HQ reports table ----*/
+
+.hq-reports-table {
+    border-bottom: none!important;
+    thead {
+        tr.nx-table-row {
+            th:nth-of-type(1) {
+                min-width: 107px;
+            }
+            th:nth-of-type(2) {
+                min-width: 120px;
+            }
+            th:nth-of-type(3) {
+                min-width: 120px;
+            }
+            th:nth-of-type(4) {
+                min-width: 120px;
+            }
+            th:nth-of-type(5) {
+                min-width: 145px;
+            }
+            th:nth-of-type(6) {
+                min-width: 140px;
+            }
+            th:nth-of-type(7) {
+                min-width: 117px;
+            }
+            th:nth-of-type(8) {
+                min-width: 125px;
+            }
+            th:nth-of-type(9) {
+                min-width: 125px;
+            }
+            th:nth-of-type(11) {
+                min-width: 109px;
+            }
+            th:nth-of-type(12) {
+                min-width: 126px;
+            }
+            th:nth-of-type(13) {
+                min-width: 140px;
+            }
+            th:nth-of-type(17) {
+                min-width: 104px;
+            }
+        }
+    }
+}
+
+/*---- Agent reports table ----*/
+
+.agent-reports-table {
+    border-bottom: none!important;
+    thead {
+        tr.nx-table-row {
+            th:nth-of-type(1) {
+                min-width: 120px;
+            }
+            th:nth-of-type(2) {
+                min-width: 120px;
+            }
+            th:nth-of-type(3) {
+                min-width: 120px;
+            }
+            th:nth-of-type(4) {
+                min-width: 145px;
+            }
+            th:nth-of-type(5) {
+                min-width: 140px;
+            }
+            th:nth-of-type(6) {
+                min-width: 117px;
+            }
+            th:nth-of-type(7) {
+                min-width: 125px;
+            }
+            th:nth-of-type(8) {
+                min-width: 125px;
+            }
+            th:nth-of-type(10) {
+                min-width: 109px;
+            }
+            th:nth-of-type(11) {
+                min-width: 126px;
+            }
+            th:nth-of-type(12) {
+                min-width: 140px;
+            }
+            th:nth-of-type(16) {
+                min-width: 104px;
+            }
+        }
+    }
+}
+
+/*---- Fixed table ----*/
+
+.fixed-table-holder {
+    width: 100%;
+    max-width: calc(100% - 30px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    @include custom-scrollbar;
+
+    > table {
+        table-layout: fixed;
+    }
+
+    // Need the `!important` keywords in the next few blocks in order to
+    // override the inline styles set through Angular.
+
+    &:not(.active--):not(.absolute--) {
+        // Using `height: 0;` with `overflow: hidden;` to hide this instead of
+        // `display: block;` because this allows us to sync up the scroll
+        // position even while it is hidden.
+        height: 0 !important;
+    }
+    &.active-- {
+        display: block;
+    }
+    &:not(.absolute--) {
+        // We use `margin-top` to position the table headers at the bottom of
+        // the table properly, but this also means it messes with the position
+        // when the table headers are fixed to the top of the screen. This is
+        // to stop that from happening.
+        margin-top: 0 !important;
+    }
+    &.absolute-- {
+        // `top` and `left` are used to position the fixed headers properly when
+        // it is fixed to the top of the screen. We can't just use `top: 0;`
+        // because that'd mean the table headers would be hidden underneath
+        // the site header, and we can't just use `left: 0;` because the table's
+        // horizontal position is also affected by the wrapper.
+        //
+        // However, when we need to position the table headers at the bottom of
+        // the table, we cannot be setting `top` and `left` at all, which is why
+        // it needs to be reset to `auto` here.
+        position: absolute;
+        top: auto !important;
+        left: auto !important;
+    }
+}

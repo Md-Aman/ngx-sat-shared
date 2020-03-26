@@ -1,0 +1,25 @@
+/*-----------------------------------------------------------------------------
+    $ Tables
+-----------------------------------------------------------------------------*/
+
+.nx-header-cell {
+    background-color: $white;
+}
+
+.nx-table-row--selectable {
+    &.is-selected {
+        .nx-table-cell {
+            font-weight: bold;
+        }
+    }
+}
+
+@include screen-sm-down {
+    .nx-table {
+        .nx-header-cell,
+        .nx-table-cell {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+}

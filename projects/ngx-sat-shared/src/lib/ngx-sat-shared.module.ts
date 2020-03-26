@@ -8,6 +8,7 @@ import { NewCoverNoteCustomerPartnerIncompleteCustomerFoundComponent } from './c
 import { NewCoverNoteCustomerPartnerContactDetailsComponent } from './components/customer-partner/contact-details/new-cover-note-customer-partner-contact-details.component';
 import { NewCoverNoteCustomerPartnerCorrespondenceDetailsComponent } from './components/customer-partner/correspondence-details/new-cover-note-customer-partner-correspondence-details.component';
 import { NewCoverNoteCustomerPartnerCustomerSearchComponent } from './components/customer-partner/customer-search/new-cover-note-customer-partner-customer-search.component';
+import { ScrollAbleTableComponent } from './components/scroll-able-table/scroll-able-table.component';
 
 import { NxIconModule } from '@allianz/ngx-ndbx/icon';
 import { NxLinkModule } from '@allianz/ngx-ndbx/link';
@@ -17,11 +18,16 @@ import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';
 import { NxAccordionModule } from '@allianz/ngx-ndbx/accordion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NxButtonModule } from '@allianz/ngx-ndbx/button';
+import { ExternalScrollbarModule } from './modules/external-scrollbar/external-scrollbar.module';
+import { NxTableModule } from '@allianz/ngx-ndbx/table';
+import { BrowserModule } from '@angular/platform-browser'
 
 @NgModule({
   declarations: [
     NgxSatSharedComponent, 
-    TestComponent, 
+    TestComponent,
+    ScrollAbleTableComponent,
     NewCoverNoteCustomerPartnerComponent,
     NewCoverNoteCustomerPartnerCustomerFoundComponent,
     NewCoverNoteCustomerPartnerCustomerNotFoundComponent,
@@ -38,11 +44,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NxFormfieldModule,
     NxAccordionModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserModule,
+    NxButtonModule,
+    ExternalScrollbarModule,
+    NxTableModule
   ],
   exports: [
     NgxSatSharedComponent, 
     TestComponent,
+    ScrollAbleTableComponent,
     NewCoverNoteCustomerPartnerComponent,
     NewCoverNoteCustomerPartnerCustomerFoundComponent,
     NewCoverNoteCustomerPartnerCustomerNotFoundComponent,

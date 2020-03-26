@@ -1,0 +1,88 @@
+<!-- <div class="table-holder   dashboard-table-holder" #tableHolder syncScroll="dashboardTable">
+    <table nxTable nxSort zebra (sortChange)="sortTable($event, 'table')" #table>
+        <thead>
+            <tr nxTableRow>
+                <th nxHeaderCell nxSortHeaderCell="cnoteDate">Isuue Date</th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteNo">cnote No </th>
+                <th nxHeaderCell nxSortHeaderCell="agentCode">agent Code </th>
+                <th nxHeaderCell nxSortHeaderCell="name">name </th>
+                <th nxHeaderCell nxSortHeaderCell="policyNo">policy No </th>
+                <th nxHeaderCell nxSortHeaderCell="productName">product Name </th>
+                <th nxHeaderCell nxSortHeaderCell="insuredName" style="min-width: 200px;">insured Name </th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteType" style="min-width: 130px;">cnote Type </th>
+                <th nxHeaderCell nxSortHeaderCell="cnoteStatus">cnote Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr selectable nxTableRow
+            *ngFor="let item of summaryList">
+                <td nxTableCell>{{ item.cnoteDate }}</td>
+                <td nxTableCell>{{ item.cnoteNo }}</td>
+                <td nxTableCell>{{ item.mkagAgent.agentCode }}</td>
+                <td nxTableCell>{{ item.mkagAgent.name }}</td>
+                <td nxTableCell>{{ item.cnoteType == "ENDT"? item.endtNo: item.policyNo}} </td>
+                <td nxTableCell>{{ item.productName }}</td>
+                <td nxTableCell>{{ item.clientPartner.clientName }}</td>
+                <td nxTableCell>{{ item.cnoteType }}</td>
+                <td nxTableCell>
+                    {{item.cnoteStatus}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="fixed-table-holder   dashboard-table-holder" [class.active--]="tableHeaderIsFixed" [class.absolute--]="tableHeaderIsAbsolute"
+    [ngStyle]="{
+        'width': fixedTableHeaderHolderWidth + 'px',
+        'height': fixedTableHeaderHeight + 'px',
+        'top': siteHeaderHeight + 'px',
+        'left': fixedTableHeaderLeft + 'px',
+        'margin-top': -fixedTableHeaderHeight + 'px'
+    }" syncScroll="dashboardTable">
+    <table nxTable nxSort zebra class="dashboard-table summary-table" (sortChange)="sortTable($event, 'fixedTable')" [ngStyle]="{
+            'width': fixedTableHeaderWidth + 'px'
+        }" #fixedTableHeader>
+        <thead>
+            <tr nxTableRow>
+                <th nxHeaderCell nxSortHeaderCell="cnoteDate" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[0] + 'px' }">
+                    Isuue Date 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteNo" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[1] + 'px' }">
+                    Cnote No 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="agentCode" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[2] + 'px' }">
+                    agent code 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="name" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[3] + 'px' }">
+                    name 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="policyNo" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[4] + 'px' }">
+                    policy no 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="productName" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[5] + 'px' }">
+                    product name
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="insuredName" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[6] + 'px' }" 
+                    style="width: 200px;">
+                    INsured Name 
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteType" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[7] + 'px' }"
+                    style="width: 130px;">
+                    c note type
+                </th>
+
+                <th nxHeaderCell nxSortHeaderCell="cnoteStatus" #fixedTableHeaderCell [ngStyle]="{ 'width': fixedTableHeaderColumnWidths[8] + 'px' }">
+                    cnote Status
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div> -->

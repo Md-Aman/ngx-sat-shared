@@ -1,0 +1,7 @@
+//-- Dropdown position ==//
+
+.cdk-overlay-backdrop.cdk-overlay-transparent-backdrop{
+	& + .cdk-overlay-connected-position-bounding-box{
+		margin-top: -15px;
+	}
+}

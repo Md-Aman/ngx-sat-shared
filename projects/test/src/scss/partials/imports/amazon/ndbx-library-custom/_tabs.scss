@@ -1,0 +1,54 @@
+.site-wrapper .site-main {
+	.nx-tab-header{
+		padding: 24px 0;
+
+		.nx-tab-header__item{
+			font-size: 16px;
+		}
+	}
+
+	.nx-tab__body{
+		outline: none;
+	}
+}
+
+@include screen-md-up {
+	.site-wrapper .site-main {
+		.nx-tab-header{
+			padding: 80px 0 40px;
+		}
+	}
+}
+
+//all policies listing
+nx-tab-group.has-action-tab-1-- #nx-tab-label-0-0{
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		right: 5px;
+		top:0;
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		background-color: $red-vibrant;
+	}
+}
+
+nx-tab-group.has-action-tab-2-- #nx-tab-label-0-1{
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		right: 5px;
+		top:0;
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		background-color: $red-vibrant;
+	}
+}
