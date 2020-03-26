@@ -8,6 +8,8 @@ import { NxButtonModule } from '@allianz/ngx-ndbx/button';
 import { ExternalScrollbarModule } from './modules/external-scrollbar/external-scrollbar.module';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
 import { BrowserModule } from '@angular/platform-browser'
+import { NxIconModule } from '@allianz/ngx-ndbx/icon';
+import { NxLinkModule } from '@allianz/ngx-ndbx/link';
 
 @NgModule({
   declarations: [NgxSatSharedComponent, TestComponent, ScrollAbleTableComponent],
@@ -15,8 +17,13 @@ import { BrowserModule } from '@angular/platform-browser'
     BrowserModule,
     NxButtonModule,
     ExternalScrollbarModule,
-    NxTableModule
+    NxTableModule,
+    NxIconModule,
+    NxLinkModule
   ],
-  exports: [NgxSatSharedComponent, TestComponent, ScrollAbleTableComponent]
+  exports: [
+    NgxSatSharedComponent, 
+    TestComponent, 
+    ScrollAbleTableComponent]
 })
 export class NgxSatSharedModule { }

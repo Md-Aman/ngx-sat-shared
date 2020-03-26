@@ -1,4 +1,16 @@
-<!-- <div class="table-holder   dashboard-table-holder" #tableHolder syncScroll="dashboardTable">
+<div class="std-ta-left std-ta-md-right">
+    <button nxButton='tertiary small' (click)="showSummaryFiltersForm=!showSummaryFiltersForm" class="dashboard-filter-button">
+        <nx-icon name="filter" class="nx-margin-right-2xs"></nx-icon> 'DASHBOARD.FILTER' 
+    </button>
+</div>
+
+<!-- <dashboard-filters *ngIf="showSummaryFiltersForm" [cnType]="cnTypeList$ | async" [status]="cnStatusList$ | async" [criteria]="cnCriteriaList$ | async"
+    (search)="searchSummary($event)">
+</dashboard-filters> -->
+
+<external-scrollbar targetSyncScroll="dashboardTable" [targetBaseWidth]="tableHolder"></external-scrollbar>
+
+<div class="table-holder   dashboard-table-holder" #tableHolder syncScroll="dashboardTable">
     <table nxTable nxSort zebra (sortChange)="sortTable($event, 'table')" #table>
         <thead>
             <tr nxTableRow>
@@ -15,8 +27,9 @@
         </thead>
         <tbody>
             <tr selectable nxTableRow
-            *ngFor="let item of summaryList">
-                <td nxTableCell>{{ item.cnoteDate }}</td>
+            *ngFor="let item of summaryList | slice: (curpage * perPage) - perPage :curpage * perPage" 
+            >
+                <td nxTableCell>{{ item.cnoteDate | date: 'dd/MM/yyyy' }}</td>
                 <td nxTableCell>{{ item.cnoteNo }}</td>
                 <td nxTableCell>{{ item.mkagAgent.agentCode }}</td>
                 <td nxTableCell>{{ item.mkagAgent.name }}</td>
@@ -85,4 +98,36 @@
             </tr>
         </thead>
     </table>
+</div>
+
+<div class="no-res-found" *ngIf="summaryList.length == 0">
+    <p> No Result Found </p>
+</div>
+
+<!-- <div class="desktop-only-pagination">
+    <form [formGroup]="pageFilterForm">
+        <div nxRow>
+            <div nxCol="6" class="items-per-page" *ngIf="summaryList.length > 5 && isFiltered">
+                'DASHBOARD.TABLE.SHOW' | translate
+                <nx-formfield class="w-88px std-pd-top-10">
+                    <nx-dropdown formControlName="perPage">
+                        <nx-dropdown-item *ngFor="let item of itemsPerPageSelections" [nxValue]="item"></nx-dropdown-item>
+                    </nx-dropdown>
+                </nx-formfield>
+                'DASHBOARD.TABLE.RESULTS_PER_PAGE' 
+            </div>
+
+
+            <div nxCol="6" class="d-flex justify-content-flex-end" *ngIf="summaryList.length > 5 && isFiltered">
+                <nx-pagination class="std-pd-top-10" [nxCount]="summaryList.length" nxType="advanced" [nxPage]="curpage" [nxPerPage]="perPage"
+                    (nxGoPrev)="prevPage()" (nxGoNext)="nextPage()" (nxGoPage)="goToPage($event)">
+                </nx-pagination>
+            </div>
+        </div>
+    </form>
 </div> -->
+<div class="std-ta-center std-pd-bottom-3m std-pd-top-s load-more">
+    <nx-link>
+        <a routerLink='/documentation' class="load-more-button">'DASHBOARD.LOAD_MORE'</a>
+    </nx-link>
+</div>
