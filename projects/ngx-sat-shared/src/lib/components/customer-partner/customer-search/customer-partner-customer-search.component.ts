@@ -5,11 +5,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { NricService } from 'src/app/libraries/nric/nric.service';
 
 @Component({
-  selector: 'ncn-customer-partner-customer-search',
-  templateUrl: './new-cover-note-customer-partner-customer-search.component.html',
-  styleUrls: ['./new-cover-note-customer-partner-customer-search.component.scss']
+  selector: 'customer-partner-customer-search',
+  templateUrl: './customer-partner-customer-search.component.html',
+  styleUrls: ['./customer-partner-customer-search.component.scss']
 })
-export class NewCoverNoteCustomerPartnerCustomerSearchComponent implements OnInit {
+export class CustomerPartnerCustomerSearchComponent implements OnInit {
   @Output() search = new EventEmitter();
   searchForm: FormGroup;
 

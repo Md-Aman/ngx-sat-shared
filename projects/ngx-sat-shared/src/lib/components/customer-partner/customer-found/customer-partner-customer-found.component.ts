@@ -1,17 +1,16 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { map } from 'rxjs/operators';
-import { CustomerPartnerBase } from '../../../interfaces/customer-partner.base';
 // import { STEP3 } from 'src/app/shared/interfaces/new-cn';
 // import { IDTYPE } from 'src/app/shared/enums/index.enum';
 // import { CustomerPartnerBase } from 'src/app/shared/classes/customer-partner.base';
 
 @Component({
-  selector: 'ncn-customer-partner-customer-found',
-  templateUrl: './new-cover-note-customer-partner-customer-found.component.html',
-  styleUrls: ['./new-cover-note-customer-partner-customer-found.component.scss']
+  selector: 'customer-partner-customer-found',
+  templateUrl: './customer-partner-customer-found.component.html',
+  styleUrls: ['./customer-partner-customer-found.component.scss']
 })
-export class NewCoverNoteCustomerPartnerCustomerFoundComponent {
+export class CustomerPartnerCustomerFoundComponent {
   @Input() source;
 
   @Output() searchAgain:EventEmitter<boolean> = new EventEmitter<boolean>();

@@ -1,0 +1,97 @@
+<nx-expansion-panel [disabled]="accordionsAreDisabled" class="mobile-only-accordion contact-details-accordion">
+  <nx-expansion-panel-header>
+    <nx-expansion-panel-title>
+      <!-- {{ 'NCN.STEP3.TITLE_CD' | translate }} -->
+      Contact Details
+    </nx-expansion-panel-title>
+  </nx-expansion-panel-header>
+
+  <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+    <nx-message nxContext="info" showIcon="true">
+      <b>
+        <!-- {{ 'NCN.STEP3.HEADLINE_2' | translate }} -->
+        Please enter mobile no or fix no.
+      </b>
+    </nx-message>
+  </div>
+
+  <form *ngIf="parentForm" [formGroup]="parentForm">
+    <div nxRow>
+      <div nxCol="12,12,6">
+        <div nxRow>
+          <div nxCol="12,12,3">
+            <nx-formfield>
+              <nx-dropdown formControlName="clientMobileCode1">
+                <nx-dropdown-item *ngFor="let item of mobileList" nxValue="{{item.code}}">{{item.descp}}
+                </nx-dropdown-item>
+              </nx-dropdown>
+            </nx-formfield>
+          </div>
+
+          <div nxCol="12,12,9">
+            <nx-formfield nxLabel="Mobile No.">
+              <input nxInput formControlName="clientMobileNo1" type="tel" maxlength="8">
+
+              <!-- <nx-error nxFormfieldError>
+                    {{ 'NCN.STEP3.CD.ERR_NO' | translate }}
+                </nx-error> -->
+            </nx-formfield>
+          </div>
+        </div>
+      </div>
+
+      <div nxCol="12,12,6">
+        <div nxRow>
+          <div nxCol="12,12,3">
+            <nx-formfield>
+              <nx-dropdown formControlName="clientMobileCode2">
+                <nx-dropdown-item *ngFor="let item of flList" nxValue="{{item.code}}">{{item.descp}}</nx-dropdown-item>
+              </nx-dropdown>
+            </nx-formfield>
+          </div>
+
+          <div nxCol="12,12,9">
+            <nx-formfield nxLabel="Fix No.">
+              <input nxInput appOnlyNumber formControlName="clientMobileNo2" type="tel" maxlength="8">
+              <!-- <nx-error nxFormfieldError>
+                    {{ 'NCN.STEP3.CD.ERR_NO' | translate }}
+                </nx-error> -->
+            </nx-formfield>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div nxRow>
+      <div nxCol="12,12,6">
+        <div nxRow>
+          <div nxCol="12,12,3">
+            <nx-formfield>
+              <nx-dropdown formControlName="clientFax1Code">
+                <nx-dropdown-item *ngFor="let item of faxList" nxValue="{{item.code}}">{{item.descp}}</nx-dropdown-item>
+              </nx-dropdown>
+            </nx-formfield>
+          </div>
+          <div nxCol="12,12,9">
+            <nx-formfield nxLabel="Fax No.">
+              <input nxInput formControlName="clientFax1No" type="tel" maxlength="8">
+
+              <!-- <nx-error nxFormfieldError>
+                    {{ 'NCN.STEP3.CD.ERR_NO' | translate }}
+                </nx-error> -->
+            </nx-formfield>
+          </div>
+        </div>
+      </div>
+
+      <div nxCol="12,12,6">
+        <nx-formfield nxLabel="Email">
+          <input nxInput formControlName="clientEmail" [email]="true">
+          <!-- <nx-error nxFormfieldError>
+                {{ 'NCN.STEP3.CD.ERR_EMAIL' | translate }}
+            </nx-error> -->
+        </nx-formfield>
+      </div>
+    </div>
+  </form>
+</nx-expansion-panel>

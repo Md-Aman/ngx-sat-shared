@@ -33,11 +33,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-new-cover-note-customer-partner',
-  templateUrl: './new-cover-note-customer-partner.component.html',
-  styleUrls: ['./new-cover-note-customer-partner.component.scss']
+  selector: 'customer-partner',
+  templateUrl: './customer-partner.component.html',
+  styleUrls: ['./customer-partner.component.scss']
 })
-export class NewCoverNoteCustomerPartnerComponent{
+export class CustomerPartnerComponent{
 
   // @Select(NCNState.isCustomerPartnerFound) isCustomerPartnerFound$;
   // @Select(NCNState.isCustomerPartnerNotFound) isCustomerPartnerNotFound$;
@@ -68,6 +68,9 @@ export class NewCoverNoteCustomerPartnerComponent{
 
   stateList = [];
   countryList = [];
+  clientFaxCodeList = [];
+  clientMobileCodeList = [];
+  clientPhoneCodeList = [];
 
   constructor(public route: ActivatedRoute, public router: Router) {
 

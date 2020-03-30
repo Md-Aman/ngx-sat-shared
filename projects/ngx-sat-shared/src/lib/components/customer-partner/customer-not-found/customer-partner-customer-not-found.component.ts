@@ -7,11 +7,11 @@ import { debounceTime, map, takeUntil } from 'rxjs/operators';
 // import { CONSTANTS, COUNTRIES } from 'src/app/shared/enums/index.enum';
 
 @Component({
-  selector: 'ncn-customer-partner-customer-not-found',
-  templateUrl: './new-cover-note-customer-partner-customer-not-found.component.html',
-  styleUrls: ['./new-cover-note-customer-partner-customer-not-found.component.scss']
+  selector: 'customer-partner-customer-not-found',
+  templateUrl: './customer-partner-customer-not-found.component.html',
+  styleUrls: ['./customer-partner-customer-not-found.component.scss']
 })
-export class NewCoverNoteCustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestroy {
+export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestroy {
   @Input() store;
   // @Input() dataSearch: STEP3.SearchDataStore;
   @Input() faxList;

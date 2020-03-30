@@ -1,90 +1,93 @@
-<!-- <nx-expansion-panel [disabled]="accordionsAreDisabled" class="mobile-only-accordion">
+<nx-expansion-panel [disabled]="accordionsAreDisabled" class="mobile-only-accordion">
     <nx-expansion-panel-header>
         <nx-expansion-panel-title>
-            {{ 'NCN.STEP3.TITLE_CRPD_DETAIL' | translate }}
+            <!-- {{ 'NCN.STEP3.TITLE_CRPD_DETAIL' | translate }} -->
+            Correspondence Details
         </nx-expansion-panel-title>
     </nx-expansion-panel-header>
 
     <form *ngIf="parentForm" [formGroup]="parentForm">
         <p nxCopytext>
             <i>
-                {{ 'GLOBAL.REQUIRED_FIELDS' | translate }}
+                <!-- {{ 'GLOBAL.REQUIRED_FIELDS' | translate }} -->
+                All fields are required.
             </i>
         </p>
 
-        <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.ADDRESS1' | translate }}">
+        <nx-formfield nxLabel="Address Line 1">
             <input nxInput formControlName="clientAddress1">
 
-            <nx-error nxFormfieldError>
+            <!-- <nx-error nxFormfieldError>
                 {{ 'NCN.STEP3.CD.ADDRESS1' | translate }}
-            </nx-error>
+            </nx-error> -->
         </nx-formfield>
 
-        <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.ADDRESS2' | translate }}">
+        <nx-formfield nxLabel="Address Line 2">
             <input nxInput formControlName="clientAddress2">
 
-            <nx-error nxFormfieldError>
+            <!-- <nx-error nxFormfieldError>
                 {{ 'NCN.STEP3.CD.ADDRESS2' | translate }}
-            </nx-error>
+            </nx-error> -->
         </nx-formfield>
 
-        <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.ADDRESS3' | translate }}">
+        <nx-formfield nxLabel="Address Line 3">
             <input nxInput formControlName="clientAddress3">
 
-            <nx-error nxFormfieldError>
+            <!-- <nx-error nxFormfieldError>
                 {{ 'NCN.STEP3.CD.ADDRESS3' | translate }}
-            </nx-error>
+            </nx-error> -->
         </nx-formfield>
 
         <div nxRow>
             <div nxCol="12,12,6">
-                <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.POSTCODE' | translate }}">
-                    <input nxInput appOnlyNumber formControlName="clientPostcode" (keyup.enter)="searchPostCode($event)">
+                <nx-formfield nxLabel="Postcode">
+                    <input nxInput formControlName="clientPostcode" (keyup.enter)="searchPostCode($event)">
 
-                    <nx-error nxFormfieldError>
+                    <!-- <nx-error nxFormfieldError>
                         {{ 'NCN.STEP3.CD.ERR_POSTCODE' | translate }}
-                    </nx-error>
+                    </nx-error> -->
                 </nx-formfield>
             </div>
             <div nxCol="12,12,6">
-                <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.CITY' | translate }}">
+                <nx-formfield nxLabel="City">
                     <input nxInput formControlName="clientCity">
 
-                    <nx-error nxFormfieldError>
+                    <!-- <nx-error nxFormfieldError>
                         {{ 'NCN.STEP3.CD.ERR_CITY' | translate }}
-                    </nx-error>
+                    </nx-error> -->
                 </nx-formfield>
             </div>
         </div>
 
         <div nxRow>
             <div nxCol="12,12,6">
-                <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.STATE' | translate }}">
+                <nx-formfield nxLabel="State">
                     <input nxInput formControlName="clientState">
 
-                    <nx-error nxFormfieldError>
+                    <!-- <nx-error nxFormfieldError>
                         {{ 'NCN.STEP3.CD.ERR_STATE' | translate }}
-                    </nx-error>
+                    </nx-error> -->
                 </nx-formfield>
             </div>
 
             <div nxCol="12,12,6">
-                <nx-formfield nxLabel="{{ 'NCN.STEP3.CD.COUNTRY' | translate }}">
+                <nx-formfield nxLabel="Country">
                     <input nxInput formControlName="clientCountry">
 
-                    <nx-error nxFormfieldError>
+                    <!-- <nx-error nxFormfieldError>
                         {{ 'NCN.STEP3.CD.ERR_COUNTRY' | translate }}
-                    </nx-error>
+                    </nx-error> -->
                 </nx-formfield>
             </div>
         </div>
 
         <div class="std-mg-bottom-m">
             <nx-radio-group name="clientAddressType" formControlName="clientAddressType" class="std-radio-group std-mg-bottom-m">
-                <nx-label>{{ 'NCN.STEP3.CD.TYPE' | translate }}</nx-label>
+                <!-- <nx-label>{{ 'NCN.STEP3.CD.TYPE' | translate }}</nx-label> -->
+                <!-- <nx-label>Residence Type</nx-label> -->
                 <nx-radio nxValue="R" class="std-radio-button">Residential</nx-radio>
                 <nx-radio nxValue="NR" class="std-radio-button">Non-residential</nx-radio>
             </nx-radio-group>
         </div>
     </form>
-</nx-expansion-panel> -->
+</nx-expansion-panel>

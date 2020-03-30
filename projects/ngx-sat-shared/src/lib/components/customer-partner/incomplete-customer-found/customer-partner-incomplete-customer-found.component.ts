@@ -6,11 +6,11 @@ import { debounceTime, map, takeUntil} from 'rxjs/operators';
 // import { CONSTANTS } from 'src/app/shared/enums/index.enum';
 
 @Component({
-  selector: 'ncn-customer-partner-incomplete-customer-found',
-  templateUrl: './new-cover-note-customer-partner-incomplete-customer-found.component.html',
-  styleUrls: ['./new-cover-note-customer-partner-incomplete-customer-found.component.scss']
+  selector: 'customer-partner-incomplete-customer-found',
+  templateUrl: './customer-partner-incomplete-customer-found.component.html',
+  styleUrls: ['./customer-partner-incomplete-customer-found.component.scss']
 })
-export class NewCoverNoteCustomerPartnerIncompleteCustomerFoundComponent implements OnInit, OnDestroy {
+export class CustomerPartnerIncompleteCustomerFoundComponent implements OnInit, OnDestroy {
   @Input() source;
   @Input() states;
   @Input() countries;
@@ -35,26 +35,6 @@ export class NewCoverNoteCustomerPartnerIncompleteCustomerFoundComponent impleme
     this.onFormChange();
   }
 
-  get name() {
-    return this.source? this.source.clientName : '';
-  }
-
-  get idValue() {
-    return this.source? this.source.idValue1 : '';
-  }
-
-  // get countryname() {
-  //   return this.source? this.getCountry(this.source.clientNationality) : '';
-  // }
-
-  // get gender() {
-  //   return this.source? this.getGender(this.source.clientGender) : '';
-  // }
-
-  // get marriedStatus() {
-  //   return this.source? this.getMaritalStatus(this.source.clientMaritalStatus): '';
-  // }
-
   initForm() {
     this.detailForm = this.fb.group({
       clientName: ['', Validators.required],
@@ -68,11 +48,11 @@ export class NewCoverNoteCustomerPartnerIncompleteCustomerFoundComponent impleme
       clientCity: ['', Validators.required],
       clientState: ['', Validators.required],
       clientCountry: ['', Validators.required],
-      clientMobileCode1: [ this.mobileCode ? this.mobileCode[0].code : '', Validators.required],
+      clientMobileCode1: ['', Validators.required],
       clientMobileNo1: ['', Validators.required],
-      clientMobileCode2: [this.flCode ? this.flCode[0].code : '', Validators.required],
+      clientMobileCode2: ['', Validators.required],
       clientMobileNo2: ['', Validators.required],
-      clientFax1Code: [this.faxList ? this.faxList[0].code : '', Validators.required],
+      clientFax1Code: ['', Validators.required],
       clientFax1No: ['', Validators.required],
       clientEmail: ['', Validators.required],
       clientAddressType: ['R', Validators.required],

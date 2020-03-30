@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NewCoverNoteCustomerPartnerComponent } from 'projects/ngx-sat-shared/src/lib/components/customer-partner/new-cover-note-customer-partner.component';
+import { CustomerPartnerComponent } from 'projects/ngx-sat-shared/src/lib/components/customer-partner/customer-partner.component';
 
 
 const routes: Routes = [
-  { path: 'customer-partner', component: NewCoverNoteCustomerPartnerComponent }
+  { path: 'customer-partner', component: CustomerPartnerComponent }
 ];
 
 @NgModule({

@@ -4,11 +4,11 @@ import { FormGroup } from '@angular/forms';
 // import { GET_POSTCODE_INFO } from '../../../../store/dashboard/dashboard.action';
 
 @Component({
-  selector: 'ncn-customer-partner-correspondence-details',
-  templateUrl: './new-cover-note-customer-partner-correspondence-details.component.html',
-  styleUrls: ['./new-cover-note-customer-partner-correspondence-details.component.scss']
+  selector: 'customer-partner-correspondence-details',
+  templateUrl: './customer-partner-correspondence-details.component.html',
+  styleUrls: ['./customer-partner-correspondence-details.component.scss']
 })
-export class NewCoverNoteCustomerPartnerCorrespondenceDetailsComponent implements OnInit {
+export class CustomerPartnerCorrespondenceDetailsComponent implements OnInit {
   @Input() parentForm: FormGroup;
 
 

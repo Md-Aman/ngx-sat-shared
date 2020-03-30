@@ -1,0 +1,33 @@
+@import "../../../../../../test/src/scss/globals.scss";
+
+::ng-deep .nx-formfield--type-nx-dropdown .nx-formfield__label {
+  width: 100%;
+}
+
+::ng-deep {
+  @include screen-md-down {
+    .contact-details-accordion {
+      .nx-expansion-panel__header {
+        .nx-expansion-panel__header-content {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.prefix {
+  width: 100px;
+  flex: 0 0 100px;
+}
+
+.number {
+  flex: 1;
+}
+
+@media (max-width: 704px) {
+  .prefix {
+    width: 81px;
+    flex: 0 0 81px;
+  }
+}
