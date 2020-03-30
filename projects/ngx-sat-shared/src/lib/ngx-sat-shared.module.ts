@@ -25,19 +25,14 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
-import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';
-import { NxDropdownModule } from '@allianz/ngx-ndbx/dropdown';
-import { ReactiveFormsModule } from '@angular/forms';
 import { NxGridModule } from '@allianz/ngx-ndbx/grid';
 
 @NgModule({
-<<<<<<< HEAD
-  declarations: [NgxSatSharedComponent, TestComponent, ScrollAbleTableComponent, PaginationComponent],
-=======
   declarations: [
     NgxSatSharedComponent, 
     TestComponent,
     ScrollAbleTableComponent,
+    PaginationComponent,
     NewCoverNoteCustomerPartnerComponent,
     NewCoverNoteCustomerPartnerCustomerFoundComponent,
     NewCoverNoteCustomerPartnerCustomerNotFoundComponent,
@@ -46,7 +41,6 @@ import { NxGridModule } from '@allianz/ngx-ndbx/grid';
     NewCoverNoteCustomerPartnerCorrespondenceDetailsComponent,
     NewCoverNoteCustomerPartnerCustomerSearchComponent
   ],
->>>>>>> 3e01098af5d05152667eeb400eb0d0c9864da0fc
   imports: [
     NxIconModule,
     NxLinkModule,
@@ -70,15 +64,10 @@ import { NxGridModule } from '@allianz/ngx-ndbx/grid';
     NxGridModule
   ],
   exports: [
-<<<<<<< HEAD
     NgxSatSharedComponent,
     TestComponent,
     ScrollAbleTableComponent,
-    PaginationComponent]
-=======
-    NgxSatSharedComponent, 
-    TestComponent,
-    ScrollAbleTableComponent,
+    PaginationComponent,
     NewCoverNoteCustomerPartnerComponent,
     NewCoverNoteCustomerPartnerCustomerFoundComponent,
     NewCoverNoteCustomerPartnerCustomerNotFoundComponent,
@@ -87,6 +76,5 @@ import { NxGridModule } from '@allianz/ngx-ndbx/grid';
     NewCoverNoteCustomerPartnerCorrespondenceDetailsComponent,
     NewCoverNoteCustomerPartnerCustomerSearchComponent
   ]
->>>>>>> 3e01098af5d05152667eeb400eb0d0c9864da0fc
 })
 export class NgxSatSharedModule { }
