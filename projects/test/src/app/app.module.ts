@@ -12,6 +12,11 @@ import { NxIconModule } from '@allianz/ngx-ndbx/icon';
 import { NxLinkModule } from '@allianz/ngx-ndbx/link';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
 
+import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
+import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';
+import { NxDropdownModule } from '@allianz/ngx-ndbx/dropdown';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NxGridModule } from '@allianz/ngx-ndbx/grid';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,13 @@ import { NxTableModule } from '@allianz/ngx-ndbx/table';
     ExternalScrollbarModule,
     NxIconModule,
     NxLinkModule,
-    NxTableModule
+    NxTableModule,
+
+    NxFormfieldModule, 
+    NxPaginationModule, 
+    NxDropdownModule,
+    ReactiveFormsModule,
+    NxGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

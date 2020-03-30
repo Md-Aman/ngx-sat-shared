@@ -2,6 +2,18 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-sat-shared",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@allianz/ngx-ndbx/button": "@allianz/ngx-ndbx/button",
+      "@allianz/ngx-ndbx/table": "@allianz/ngx-ndbx/table",
+      "@angular/platform-browser": "@angular/platform-browser",
+      "@allianz/ngx-ndbx/link": "@allianz/ngx-ndbx/link",
+      "@allianz/ngx-ndbx/icon":"'@allianz/ngx-ndbx/icon",
+      "@allianz/ngx-ndbx/pagination": "@allianz/ngx-ndbx/pagination",
+      "@allianz/ngx-ndbx/formfield": "@allianz/ngx-ndbx/formfield",
+      "@allianz/ngx-ndbx/dropdown": "@allianz/ngx-ndbx/dropdown",
+      "@angular/forms": "@angular/forms",
+      "@allianz/ngx-ndbx/grid": "@allianz/ngx-ndbx/grid"
+    }
   }
 }
