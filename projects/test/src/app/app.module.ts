@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgxSatSharedModule } from 'ngx-sat-shared';
 import { NxButtonModule } from '@allianz/ngx-ndbx/button';
 import { TestTableComponent } from './test-table/test-table.component';
 import { ExternalScrollbarModule } from './shared/external-scrollbar/external-scrollbar.module';
 import { NxIconModule } from '@allianz/ngx-ndbx/icon';
 import { NxLinkModule } from '@allianz/ngx-ndbx/link';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
+import { NgxSatSharedModule } from 'projects/ngx-sat-shared/src/lib/ngx-sat-shared.module';
 
 import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
 import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';

@@ -1,0 +1,77 @@
+<!-- <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="w-1col">
+        <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+            <nx-radio-toggle formControlName="clientType">
+                <nx-radio-toggle-button nxValue="{{clientType('INDIVIDUAL')}}" [nxSelected]="true">
+                    {{ 'NCN.STEP3.FORM.INDIVIDUAL' | translate }}
+                </nx-radio-toggle-button>
+
+                <nx-radio-toggle-button nxValue="{{clientType('COMPANY')}}">
+                    {{ 'NCN.STEP3.FORM.COMPANY' | translate }}
+                </nx-radio-toggle-button>
+            </nx-radio-toggle>
+        </div>
+
+        <ng-container *ngIf="isIndividual">
+            <div class="std-mg-bottom-m">
+                <nx-radio-group name="nationality" formControlName="clientAddressType" class="std-radio-group">
+                    <nx-radio nxValue="{{country('MALAYSIAN')}}" class="std-radio-button">{{ 'NCN.STEP3.FORM.MALAYSIAN' | translate }}</nx-radio>
+                    <nx-radio nxValue="{{country('NON_MALAYSIAN')}}" class="std-radio-button">{{ 'NCN.STEP3.FORM.NON_MALAYSIAN' | translate }}</nx-radio>
+                </nx-radio-group>
+            </div>
+
+            <div nxRow *ngIf="isMalaysian">
+                <div nxCol="12" class="id-type-col">
+                    <nx-formfield nxLabel="{{ 'NCN.STEP3.FORM.ID_TYPE' | translate }}">
+                        <nx-dropdown formControlName="idType1">
+                            <nx-dropdown-item nxValue="{{idType('NRIC')}}">{{ 'NCN.STEP3.NRIC' | translate }}</nx-dropdown-item>
+                            <nx-dropdown-item nxValue="{{idType('OLD_IC')}}">{{ 'NCN.STEP3.FORM.IC' | translate }} </nx-dropdown-item>
+                            <nx-dropdown-item nxValue="{{idType('POL')}}">{{ 'NCN.STEP3.FORM.GOV_ID' | translate }}</nx-dropdown-item>
+                        </nx-dropdown>
+                    </nx-formfield>
+                </div>
+
+                <div nxCol="12" class="id-number-col">
+                    <nx-formfield nxLabel="{{ 'NCN.STEP3.FORM.ID' | translate }}">
+                        <input nxInput formControlName="idValue1" maxlength="idLimitation">
+                        <nx-error nxFormfieldError>
+                            <ng-container *ngIf="errorType === 'required'">
+                                {{ 'NCN.STEP3.FORM.ERR_ID' | translate }}
+                            </ng-container>
+    
+                            <ng-container *ngIf="errorType === 'wrongFormatNRIC'">
+                                {{ 'NCN.STEP3.FORM.ERR_NRIC' | translate }}
+                            </ng-container>
+                        </nx-error>
+                    </nx-formfield>
+                </div>
+            </div>
+
+            <nx-formfield nxLabel="{{ 'NCN.STEP3.FORM.PASSPORT' | translate }}" *ngIf="!isMalaysian">
+                <input nxInput formControlName="idValue1">
+
+                <nx-error nxFormfieldError>
+                    {{ 'NCN.STEP3.FORM.ERR_PASSPORT' | translate }}
+                </nx-error>
+            </nx-formfield>
+        </ng-container>
+
+        <ng-container *ngIf="!isIndividual">
+            <nx-formfield nxLabel="{{ 'NCN.STEP3.FORM.BRO' | translate }}">
+                <input nxInput formControlName="idValue1">
+
+                <nx-error nxFormfieldError appearance="text">
+                    {{ 'NCN.STEP3.FORM.ERR_BRN' | translate }}
+                </nx-error>
+            </nx-formfield>
+        </ng-container>
+
+        <div class="std-mg-top-s std-mg-top-md-2m">
+            <button type="submit" nxButton="secondary">
+                {{'GLOBAL.SEARCH' | translate }}
+            </button>
+        </div>
+    </div>
+
+    <hr>
+</form> -->

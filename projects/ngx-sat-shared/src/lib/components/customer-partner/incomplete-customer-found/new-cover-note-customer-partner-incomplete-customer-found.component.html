@@ -1,0 +1,91 @@
+<div class="w-1p5col">
+    <nx-link>
+        <a (click)="restartSearch()" class="std-tt-uppercase">
+            <nx-icon name="arrow-left"></nx-icon>
+            <!-- {{ 'NCN.ACTION.SEARCH_AGAIN' | translate }} -->
+            Search Again
+        </a>
+    </nx-link>
+
+    <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+        <nx-message nxContext="success" showIcon="true" class="std-mg-bottom-m std-mg-bottom-md-3m">
+            <ng-content select="[title]"></ng-content>
+        </nx-message>
+    </div>
+
+    <div class="std-mg-bottom-m std-mg-bottom-md-3m">
+        <table class="key-value-table   customer-info-kvt">
+            <tbody>
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.NAME' | translate }} -->
+                        Name
+                    </th>
+
+                    <td>
+                        {{ name }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.NRIC' | translate }} -->
+                        NRIC
+                    </th>
+
+                    <td>
+                        {{ idValue }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.NATIONALITY' | translate }} -->
+                        Nationality
+                    </th>
+
+                    <td>
+                        {{ countryname }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.GENDER' | translate }} -->
+                        Gender
+                    </th>
+
+                    <td>
+                        {{ gender }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="key-value-table__key">
+                        <!-- {{ 'NCN.STEP3.CD.MARITAL' | translate }} -->
+                        Marital Status
+                    </th>
+
+                    <td>
+                        {{ marriedStatus }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<hr class="std-mg-bottom-m std-mg-bottom-md-3m">
+
+
+<ncn-customer-partner-contact-details 
+    [parentForm]="detailForm" 
+    [faxList]="faxList" 
+    [mobileList]="mobileCode" 
+    [flList]="flCode">
+</ncn-customer-partner-contact-details>
+<hr class="std-mg-bottom-m std-mg-bottom-md-3m std-mg-top-xs std-mg-top-md-m   hide-for-mobile">
+<ncn-customer-partner-correspondence-details [parentForm]="detailForm"></ncn-customer-partner-correspondence-details>
+
+
+<br>
