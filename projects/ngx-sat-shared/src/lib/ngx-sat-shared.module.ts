@@ -27,6 +27,9 @@ import { NxTableModule } from '@allianz/ngx-ndbx/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
+
 @NgModule({
   declarations: [
     NgxSatSharedComponent, 
@@ -38,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerPartnerIncompleteCustomerFoundComponent,
     CustomerPartnerContactDetailsComponent,
     CustomerPartnerCorrespondenceDetailsComponent,
-    CustomerPartnerCustomerSearchComponent
+    CustomerPartnerCustomerSearchComponent,
+    PaginationComponent
   ],
   imports: [
     NxIconModule,
@@ -58,10 +62,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NxInputModule,
     BrowserAnimationsModule,
     NxGridModule,
-    NxRadioModule
+    NxRadioModule,
+    NxPaginationModule,
+    NxPaginationModule,
+    NxFormfieldModule,
+    NxDropdownModule,
+    ReactiveFormsModule,
+    NxGridModule
   ],
   exports: [
-    NgxSatSharedComponent, 
+    NgxSatSharedComponent,
     TestComponent,
     ScrollAbleTableComponent,
     CustomerPartnerComponent,
@@ -70,7 +80,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerPartnerIncompleteCustomerFoundComponent,
     CustomerPartnerContactDetailsComponent,
     CustomerPartnerCorrespondenceDetailsComponent,
-    CustomerPartnerCustomerSearchComponent
+    CustomerPartnerCustomerSearchComponent,
+    PaginationComponent
   ]
 })
 export class NgxSatSharedModule { }

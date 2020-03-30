@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, NgZone, HostListener, ViewChild, ElementRef, ViewChildren, ViewRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, NgZone, HostListener, ViewChild, ElementRef, ViewChildren, ViewRef, AfterViewInit, Input } from '@angular/core';
 import { SortEvent, SortDirection } from '@allianz/ngx-ndbx/table/public-api';
 import { SiteHeaderService } from '../../services/site-header/site-header.service';
 import { NxSortHeaderComponent } from '@allianz/ngx-ndbx/table';
@@ -10,11 +10,9 @@ import { throttleTime, debounceTime } from 'rxjs/operators';
   styleUrls: ['./scroll-able-table.component.css']
 })
 export class ScrollAbleTableComponent implements OnInit, AfterViewInit {
-  currentSort: any = null;
-  curpage: number = 1;
-  perPage: number = 20;
-  itemsPerPageSelections = [5, 10, 20, 50, 100];
-  showSummaryFiltersForm: boolean = false;
+  @Input() curPage: number = 1 ;
+  @Input() perPage: number = 20;
+
   topScrollerWidth: number;
   @ViewChild(
     'tableHolder',

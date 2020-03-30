@@ -1,11 +1,20 @@
 
-
-<lib-test></lib-test>
-<lib-test></lib-test>
 <router-outlet></router-outlet>
-<!-- <div style="flex: 1 1 auto;">
-    <div class="container"> -->
-        <!-- <test-table></test-table>
-        <lib-scroll-able-table></lib-scroll-able-table>
+<div style="flex: 1 1 auto;">
+    <div class="container">
+        <!-- <test-table></test-table> -->
+        <lib-scroll-able-table
+        [curPage]="curPage"
+        [perPage]="perPage"
+        ></lib-scroll-able-table>
+        
+        <lib-pagination 
+        [curPage]="curPage"
+        [perPage]="perPage"
+        [dataLength]="dataLength"
+        [itemsPerPageSelections]="itemsPerPageSelections"
+        (perPageChanges)="perPageChanges($event)"
+        (curPageChanges)="curPageChanges($event)"
+        ></lib-pagination>
     </div>
 </div> -->

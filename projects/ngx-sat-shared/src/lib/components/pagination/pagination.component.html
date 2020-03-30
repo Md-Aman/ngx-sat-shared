@@ -1,0 +1,21 @@
+<div class="desktop-only-pagination">
+    <form [formGroup]="pageFilterForm">
+        <div nxRow>
+            <div nxCol="6" class="items-per-page">
+                show
+                <nx-formfield class="w-88px std-pd-top-10">
+                    <nx-dropdown formControlName="perPage">
+                        <nx-dropdown-item *ngFor="let item of itemsPerPageSelections" [nxValue]="item">
+                        </nx-dropdown-item>
+                    </nx-dropdown>
+                </nx-formfield>
+                results per page
+            </div>
+            <div nxCol="6" class="d-flex justify-content-flex-end">
+                <nx-pagination class="std-pd-top-10" [nxCount]="dataLength" nxType="advanced" [nxPage]="curPage"
+                    [nxPerPage]="perPage" (nxGoPrev)="prevPage()" (nxGoNext)="nextPage()" (nxGoPage)="goToPage($event)">
+                </nx-pagination>
+            </div>
+        </div>
+    </form>
+</div>
