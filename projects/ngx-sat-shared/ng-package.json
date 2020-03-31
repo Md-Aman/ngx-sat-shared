@@ -8,12 +8,15 @@
       "@allianz/ngx-ndbx/table": "@allianz/ngx-ndbx/table",
       "@angular/platform-browser": "@angular/platform-browser",
       "@allianz/ngx-ndbx/link": "@allianz/ngx-ndbx/link",
-      "@allianz/ngx-ndbx/icon":"'@allianz/ngx-ndbx/icon",
       "@allianz/ngx-ndbx/pagination": "@allianz/ngx-ndbx/pagination",
       "@allianz/ngx-ndbx/formfield": "@allianz/ngx-ndbx/formfield",
       "@allianz/ngx-ndbx/dropdown": "@allianz/ngx-ndbx/dropdown",
-      "@angular/forms": "@angular/forms",
-      "@allianz/ngx-ndbx/grid": "@allianz/ngx-ndbx/grid"
+      "@allianz/ngx-ndbx/message": "@allianz/ngx-ndbx/message",
+      "@allianz/ngx-ndbx/grid": "@allianz/ngx-ndbx/grid",
+      "@allianz/ngx-ndbx/accordion": "@allianz/ngx-ndbx/accordion",
+      "@allianz/ngx-ndbx/input": "@allianz/ngx-ndbx/input",
+      "@allianz/ngx-ndbx/radio-button": "@allianz/ngx-ndbx/radio-button",
+      "@allianz/ngx-ndbx/icon": "@allianz/ngx-ndbx/icon"
     }
   }
 }

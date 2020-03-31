@@ -37,9 +37,10 @@ export class PaginationComponent implements OnInit {
       debounceTime(250),
       takeUntil(this.unsubscribe$)
     ).subscribe((value) => {
-      this.perPage = value;
       this.curPage = 1;
+      this.perPage = value;
       this.perPageChanges.emit(this.perPage);
+      this.emitCurPage();
     });
   }
 
