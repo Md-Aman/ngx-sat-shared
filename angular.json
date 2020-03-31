@@ -8,6 +8,11 @@
       "root": "projects/ngx-sat-shared",
       "sourceRoot": "projects/ngx-sat-shared/src",
       "prefix": "lib",
+      "schematics": {                           
+        "@schematics/angular:component": {      
+          "styleext": "scss"                   
+        }                                      
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
