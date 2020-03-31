@@ -12,7 +12,7 @@ import { debounceTime, map, takeUntil } from 'rxjs/operators';
   styleUrls: ['./customer-partner-customer-not-found.component.scss']
 })
 export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestroy {
-  @Input() store;
+  @Input() source;
   // @Input() dataSearch: STEP3.SearchDataStore;
   @Input() faxList;
   @Input() mobileCode;
@@ -52,35 +52,28 @@ export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestr
 
   initForm() {
     this.customerInfoForm = this.fb.group({
-      clientName: [this.getProperty('clientName'), Validators.required],
-      longName: [this.getProperty('longName')],
-      clientGender: [this.getProperty('clientGender', '1'), Validators.required],
-      clientMaritalStatus: [this.getProperty('clientGender', '1'), Validators.required],
-      clientAddress1: [this.getClientPartner('clientAddress1'), Validators.required],
-      clientAddress2: [this.getClientPartner('clientAddress2'), Validators.required],
-      clientAddress3: [this.getClientPartner('clientAddress3'), Validators.required],
-      clientPostcode: [this.getClientPartner('clientPostcode'), Validators.required],
-      clientCity: [this.getClientPartner('clientCity'), Validators.required],
-      clientState: [this.getClientPartner('clientState'), Validators.required],
-      clientCountry: [this.getClientPartner('clientCountry'), Validators.required],
-      clientMobileCode1: [this.getProperty('clientMobileCode1', this.mobileCode ? this.mobileCode[0].code: ''), Validators.required],
-      clientMobileNo1: [this.getProperty('clientMobileNo1'), Validators.required],
-      clientMobileCode2: [this.getProperty('clientMobileCode2', this.flCode ? this.flCode[0].code: ''), Validators.required],
-      clientMobileNo2: [this.getProperty('clientMobileNo2'), Validators.required],
-      clientFax1Code: [this.getClientPartner('clientFax1Code', this.faxList ? this.faxList[0].code : ''), Validators.required],
-      clientFax1No: [this.getClientPartner('clientFax1No'), Validators.required],
-      clientEmail: [this.getProperty('clientEmail'), Validators.required],
-      clientAddressType: [this.getClientPartner('clientAddressType', 'R'), Validators.required]
+      clientName: ['', Validators.required],
+      longName: [''],
+      clientGender: ['', Validators.required],
+      clientMaritalStatus: ['', Validators.required],
+      clientAddress1: ['', Validators.required],
+      clientAddress2: ['', Validators.required],
+      clientAddress3: ['', Validators.required],
+      clientPostcode: ['', Validators.required],
+      clientCity: ['', Validators.required],
+      clientState: ['', Validators.required],
+      clientCountry: ['', Validators.required],
+      clientMobileCode1: ['', Validators.required],
+      clientMobileNo1: ['', Validators.required],
+      clientMobileCode2: ['', Validators.required],
+      clientMobileNo2: ['', Validators.required],
+      clientFax1Code: ['', Validators.required],
+      clientFax1No: ['', Validators.required],
+      clientEmail: ['', Validators.required],
+      clientAddressType: ['', Validators.required]
     });
   }
 
-  getProperty(key, defaultValue = '') {
-    return this.store ? this.store[key] : defaultValue;
-  }
-
-  getClientPartner(key, defaultValue = ''){
-    return this.store ? this.store.clientPartnerAddress[key] : defaultValue;
-  }
   onFormChange() {
     merge(
       this.customerInfoForm.get('clientName').valueChanges,

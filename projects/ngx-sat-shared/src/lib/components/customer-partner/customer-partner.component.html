@@ -16,22 +16,22 @@
 <!-- <ng-container *ngIf="(showSearchComponent$ | async)">
     <customer-partner-customer-search (search)="onSearch($event)">
     </customer-partner-customer-search>
-</ng-container>
+</ng-container> -->
 
-<ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerNotFound$ | async)">
+<ng-container>
     <customer-partner-customer-not-found
-        [dataSearch]="dataSearch3$ | async"
-        [store]="dataStore3$ | async"
-        [faxList]="clientFax1CodeList$ | async" 
-        [mobileCode]="clientMobileCode1List$ | async"
-        [flCode]="clientPhoneCodeList$ | async" 
+        [source]="CPFound"
+        [faxList]="clientFaxCodeList" 
+        [mobileCode]="clientMobileCodeList"
+        [flCode]="clientPhoneCodeList" 
         (completed)="onCreatedCustomerPartner($event)" 
         (searchAgain)="searchAgain($event)">
         <h2 title>
-            {{ 'NCN.STEP3.NOT_FOUND' | translate: {'object': 'Customer'} }}
+            <!-- {{ 'NCN.STEP3.NOT_FOUND' | translate: {'object': 'Customer'} }} -->
+            Customer Not Found
         </h2>
     </customer-partner-customer-not-found>
-</ng-container> -->
+</ng-container>
 
 <!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerFound$ | async)"> -->
 <!-- <ng-container>
@@ -45,7 +45,7 @@
     </customer-partner-customer-found>
 </ng-container> -->
 
-<ng-container>
+<!-- <ng-container>
     <customer-partner-incomplete-customer-found
         [source]="CPFound" 
         [states]="stateList" 
@@ -55,12 +55,12 @@
         [flCode]="clientPhoneCodeList"
         (completed)="onUpdatedCustomerPartner($event)" 
         (searchAgain)="searchAgain($event)">
-        <b title>
+        <b title> -->
             <!-- {{ 'NCN.STEP3.FOUND' | translate: {'object': 'Customer'} }} -->
-            Incomplete Customer Found
+            <!-- Incomplete Customer Found
         </b>
     </customer-partner-incomplete-customer-found>
-</ng-container>
+</ng-container> -->
 
 <!-- <br> -->
 

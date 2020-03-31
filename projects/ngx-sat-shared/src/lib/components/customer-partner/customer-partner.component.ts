@@ -56,7 +56,7 @@ export class CustomerPartnerComponent{
   CPFound = {
     name: "Lee Chong Wei",
     idValue: "740101010101",
-    countryname: "Malaysian",
+    nationality: "Malaysian",
     gender: "Male",
     marriedStatus: "Married",
     mobilePhone: "010-1234567",
