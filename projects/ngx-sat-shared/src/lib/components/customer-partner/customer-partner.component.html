@@ -13,12 +13,12 @@
     </p>
 </div>
 
-<!-- <ng-container *ngIf="(showSearchComponent$ | async)">
+<ng-container>
     <customer-partner-customer-search (search)="onSearch($event)">
     </customer-partner-customer-search>
-</ng-container> -->
+</ng-container>
 
-<ng-container>
+<!-- <ng-container>
     <customer-partner-customer-not-found
         [source]="CPFound"
         [faxList]="clientFaxCodeList" 
@@ -26,12 +26,12 @@
         [flCode]="clientPhoneCodeList" 
         (completed)="onCreatedCustomerPartner($event)" 
         (searchAgain)="searchAgain($event)">
-        <h2 title>
+        <h2 title> -->
             <!-- {{ 'NCN.STEP3.NOT_FOUND' | translate: {'object': 'Customer'} }} -->
-            Customer Not Found
+            <!-- Customer Not Found
         </h2>
     </customer-partner-customer-not-found>
-</ng-container>
+</ng-container> -->
 
 <!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerFound$ | async)"> -->
 <!-- <ng-container>

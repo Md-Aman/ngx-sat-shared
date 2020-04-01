@@ -21,20 +21,20 @@ export class CustomerPartnerCustomerSearchComponent implements OnInit {
 
   ngOnInit() {
     this.searchForm = this.fb.group({
-      // clientType: [CLIENTTYPE.INDIVIDUAL],
-      // clientAddressType: [COUNTRIES.MALAYSIAN],
-      // idType1: [IDTYPE.NRIC],
-      // idValue1: ['', Validators.required],
+      clientType: ['individual'],
+      clientAddressType: ['M'],
+      idType1: ['nric'],
+      idValue1: ['', Validators.required],
     });
   }
 
-  // get isIndividual() {
-  //   return this.searchForm.get('clientType').value === CLIENTTYPE.INDIVIDUAL;
-  // }
+  get isIndividual() {
+    return this.searchForm.get('clientType').value === 'individual';
+  }
 
-  // get isMalaysian() {
-  //   return this.searchForm.get('clientAddressType').value === COUNTRIES.MALAYSIAN;
-  // }
+  get isMalaysian() {
+    return this.searchForm.get('clientAddressType').value === 'M';
+  }
 
   get errorType() {
     let errors = this.searchForm.controls.idValue1.errors;

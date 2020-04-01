@@ -81,7 +81,7 @@ export class CustomerPartnerComponent{
     // this.store.dispatch(new RESET_STORE_3());
   }
 
-  // onSearch($event: STEP3.SearchDataStore) {
+  onSearch($event) {
     // const agentInfo = this.store.selectSnapshot<STEP1.DataStore>(state => state.NCNState.ncn.step1);
     // const params: STEP3.SearchQuery = {
     //   idType: $event.idType1,
@@ -90,7 +90,7 @@ export class CustomerPartnerComponent{
     // }
     // this.store.dispatch(new STORE_STEP3_SEARCH($event));
     // this.store.dispatch(new GET_CUSTOMER_PARTNER(params));
-  // }
+  }
 
   onCreatedCustomerPartner($event) {
     const params = this.buildQuery($event);

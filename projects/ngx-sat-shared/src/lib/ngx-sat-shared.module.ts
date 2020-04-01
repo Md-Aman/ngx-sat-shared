@@ -19,6 +19,7 @@ import { NxAccordionModule } from '@allianz/ngx-ndbx/accordion';
 import { NxInputModule } from '@allianz/ngx-ndbx/input';
 import { NxGridModule } from '@allianz/ngx-ndbx/grid';
 import { NxRadioModule } from '@allianz/ngx-ndbx/radio-button';
+import { NxRadioToggleModule } from '@allianz/ngx-ndbx/radio-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NxButtonModule } from '@allianz/ngx-ndbx/button';
@@ -68,7 +69,8 @@ import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
     NxFormfieldModule,
     NxDropdownModule,
     ReactiveFormsModule,
-    NxGridModule
+    NxGridModule,
+    NxRadioToggleModule
   ],
   exports: [
     NgxSatSharedComponent,
