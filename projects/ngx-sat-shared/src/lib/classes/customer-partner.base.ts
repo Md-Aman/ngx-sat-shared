@@ -33,54 +33,54 @@ export abstract class CustomerPartnerBase {
   // }
 
   get idValue() {
-    return this.source.idValue1;
+    return this.source.idValue;
   }
 
-  // get gender() {
-  //   return this.getGender(this.source.clientGender);
-  // }
+  get gender() {
+    return this.source.gender;
+  }
 
-  // get countryname() {
-  //   return this.source.idType1 === IDTYPE.PASS? COUNTRIES.NM: COUNTRIES.MAL;
-    // return this.source.clientNationality === COUNTRIES.MALAYSIAN? this.getCountry(this.source.clientNationality): COUNTRIES.NM;
-  // }
+  get nationality() {
+    return this.source.nationality;
+  }
 
-  // get marriedStatus() {
-  //   return this.getMaritalStatus(this.source.clientMaritalStatus) ? 
-  //   this.getMaritalStatus(this.source.clientMaritalStatus) 
-  //   : 
-  //   CONSTANTS.DEFAULT_DISPLAY;
-  // }
+  get marriedStatus() {
+    return this.source.marriedStatus;
+  }
 
-  // get mobilePhone() {
-  //   return this.source.clientMobileCode1 && this.source.clientMobileNo1 ?
-  //     `${this.source.clientMobileCode1}-${this.source.clientMobileNo1}`
-  //     :
-  //     CONSTANTS.DEFAULT_DISPLAY;
-  // }
+  get mobilePhone() {
+    // return this.source.clientMobileCode1 && this.source.clientMobileNo1 ?
+    //   `${this.source.clientMobileCode1}-${this.source.clientMobileNo1}`
+    //   :
+    //   CONSTANTS.DEFAULT_DISPLAY;
+    return this.source.mobilePhone
+  }
 
-  // get fixLine() {
-  //   return this.source.clientMobileCode2 && this.source.clientMobileNo2 ?
-  //     `${this.source.clientMobileCode2}-${this.source.clientMobileNo2}`
-  //     :
-  //     CONSTANTS.DEFAULT_DISPLAY;
-  // }
+  get fixLine() {
+    // return this.source.clientMobileCode2 && this.source.clientMobileNo2 ?
+    //   `${this.source.clientMobileCode2}-${this.source.clientMobileNo2}`
+    //   :
+    //   CONSTANTS.DEFAULT_DISPLAY;
+    return this.source.fixLine;
+  }
 
-  // get faxNumner() {
-  //   return this.source.clientPartnerAddress!.clientFax1Code && this.source.clientPartnerAddress!.clientFax1No ?
-  //     `${this.source.clientPartnerAddress.clientFax1Code}-${this.source.clientPartnerAddress.clientFax1No}`
-  //     :
-  //     CONSTANTS.DEFAULT_DISPLAY;
-  // }
+  get faxNumber() {
+    // return this.source.clientPartnerAddress!.clientFax1Code && this.source.clientPartnerAddress!.clientFax1No ?
+    //   `${this.source.clientPartnerAddress.clientFax1Code}-${this.source.clientPartnerAddress.clientFax1No}`
+    //   :
+    //   CONSTANTS.DEFAULT_DISPLAY;
+    return this.source.faxNumber;
+  }
 
-  // get fullAddress() {
-  //   const clientPartnerAddress = this.source.clientPartnerAddress;
-  //   const clientAddress1 = clientPartnerAddress.clientAddress1 ? clientPartnerAddress.clientAddress1 : '';
-  //   const clientAddress2 = clientPartnerAddress.clientAddress2 ? clientPartnerAddress.clientAddress2 : '';
-  //   const clientAddress3 = clientPartnerAddress.clientAddress3 ? clientPartnerAddress.clientAddress3 : '';
-  //   const address = `${clientAddress1} ${clientAddress2} ${clientAddress3}`;
-  //   return `${address}, ${clientPartnerAddress.clientPostcode}, ${this.city}, ${this.state}, ${this.country}`;
-  // }
+  get fullAddress() {
+    // const clientPartnerAddress = this.source.clientPartnerAddress;
+    // const clientAddress1 = clientPartnerAddress.clientAddress1 ? clientPartnerAddress.clientAddress1 : '';
+    // const clientAddress2 = clientPartnerAddress.clientAddress2 ? clientPartnerAddress.clientAddress2 : '';
+    // const clientAddress3 = clientPartnerAddress.clientAddress3 ? clientPartnerAddress.clientAddress3 : '';
+    // const address = `${clientAddress1} ${clientAddress2} ${clientAddress3}`;
+    // return `${address}, ${clientPartnerAddress.clientPostcode}, ${this.city}, ${this.state}, ${this.country}`;
+    return this.source.address;
+  }
 
   // get city(){
   //   const city = this.cities.find(city => city.code === this.source.clientPartnerAddress.clientCity);
@@ -97,9 +97,9 @@ export abstract class CustomerPartnerBase {
   //   return country ? country.descp : CONSTANTS.DEFAULT_DISPLAY;
   // }
 
-  // get email() {
-  //   return this.source.clientEmail ? this.source.clientEmail : CONSTANTS.DEFAULT_DISPLAY;
-  // }
+  get email() {
+    return this.source.email;
+  }
 
   // get isLongName() {
   //   return this.source.insuredName != null;

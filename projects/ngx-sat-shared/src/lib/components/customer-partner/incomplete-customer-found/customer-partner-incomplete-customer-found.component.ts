@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Subject, fromEvent, merge} from 'rxjs';
 import { debounceTime, map, takeUntil} from 'rxjs/operators';
+import { CustomerPartnerBase } from '../../../classes/customer-partner.base';
 // import { CONSTANTS } from 'src/app/shared/enums/index.enum';
 
 @Component({
@@ -10,7 +11,7 @@ import { debounceTime, map, takeUntil} from 'rxjs/operators';
   templateUrl: './customer-partner-incomplete-customer-found.component.html',
   styleUrls: ['./customer-partner-incomplete-customer-found.component.scss']
 })
-export class CustomerPartnerIncompleteCustomerFoundComponent implements OnInit, OnDestroy {
+export class CustomerPartnerIncompleteCustomerFoundComponent extends CustomerPartnerBase implements OnInit, OnDestroy {
   @Input() source;
   @Input() states;
   @Input() countries;
@@ -28,6 +29,7 @@ export class CustomerPartnerIncompleteCustomerFoundComponent implements OnInit, 
   // getMaritalStatus = CONSTANTS.getMaritalStatus();
 
   constructor(private fb: FormBuilder) { 
+    super();
   }
 
   ngOnInit() {

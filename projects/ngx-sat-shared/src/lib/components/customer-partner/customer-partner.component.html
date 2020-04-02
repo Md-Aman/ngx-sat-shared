@@ -13,12 +13,13 @@
     </p>
 </div>
 
-<ng-container>
+<!-- <ng-container>
     <customer-partner-customer-search (search)="onSearch($event)">
     </customer-partner-customer-search>
-</ng-container>
+</ng-container> -->
 
-<!-- <ng-container>
+<!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerNotFound$ | async)"> -->
+<ng-container>
     <customer-partner-customer-not-found
         [source]="CPFound"
         [faxList]="clientFaxCodeList" 
@@ -26,12 +27,12 @@
         [flCode]="clientPhoneCodeList" 
         (completed)="onCreatedCustomerPartner($event)" 
         (searchAgain)="searchAgain($event)">
-        <h2 title> -->
+        <h2 title>
             <!-- {{ 'NCN.STEP3.NOT_FOUND' | translate: {'object': 'Customer'} }} -->
-            <!-- Customer Not Found
+            Customer Not Found
         </h2>
     </customer-partner-customer-not-found>
-</ng-container> -->
+</ng-container>
 
 <!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerFound$ | async)"> -->
 <!-- <ng-container>
@@ -45,6 +46,7 @@
     </customer-partner-customer-found>
 </ng-container> -->
 
+<!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (incompletedUser$ | async)"> -->
 <!-- <ng-container>
     <customer-partner-incomplete-customer-found
         [source]="CPFound" 
@@ -61,34 +63,3 @@
         </b>
     </customer-partner-incomplete-customer-found>
 </ng-container> -->
-
-<!-- <br> -->
-
-<!-- <div class="md-up-- inline-block-group">
-    <div class="inline-block-group__elem">
-        <button type="button" routerLink="../cover-note-details" [disabled]="isCallingAPI" nxButton="secondary"> -->
-            <!-- {{ 'NCN.ACTION.BACK' | translate }} -->
-            <!-- Back
-        </button>
-    </div>
-
-    <div class="inline-block-group__elem">
-        <button 
-            type="button"
-            nxButton="primary" 
-            (click)="saveAsDraft()"> -->
-            <!-- {{ 'NCN.ACTION.SAVE_DRAFT' | translate }} -->
-            <!-- Save Draft
-        </button>
-    </div>
-
-    <div class="inline-block-group__elem">
-        <button 
-            type="button"
-            nxButton="primary" 
-            (click)="nextPage()"> -->
-            <!-- {{ 'NCN.ACTION.NEXT' | translate }} -->
-            <!-- Next
-        </button>
-    </div>
-</div> -->

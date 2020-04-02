@@ -54,7 +54,7 @@ export class CustomerPartnerComponent{
   // @Select(DashboardState.clientPhoneCodeList) clientPhoneCodeList$;
 
   CPFound = {
-    name: "Lee Chong Wei",
+    clientName: "Lee Chong Wei",
     idValue: "740101010101",
     nationality: "Malaysian",
     gender: "Male",
