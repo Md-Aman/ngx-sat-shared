@@ -19,6 +19,7 @@ export class CustomerPartnerIncompleteCustomerFoundComponent extends CustomerPar
   @Input() mobileCode;
   @Input() flCode;
   @Output() completed = new EventEmitter();
+  @Output() searchPostcode = new EventEmitter();
   @Output() searchAgain:EventEmitter<boolean> = new EventEmitter<boolean>();
   
   detailForm: FormGroup;
@@ -90,6 +91,10 @@ export class CustomerPartnerIncompleteCustomerFoundComponent extends CustomerPar
 
   restartSearch() {
     this.searchAgain.emit(true);
+  }
+
+  onSearchPostcode(value){
+    this.searchPostcode.emit(value);
   }
 
   ngOnDestroy() {

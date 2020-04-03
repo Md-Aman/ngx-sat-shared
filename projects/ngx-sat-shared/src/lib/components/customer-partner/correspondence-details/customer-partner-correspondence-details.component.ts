@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 // import { Store } from '@ngxs/store';
 // import { GET_POSTCODE_INFO } from '../../../../store/dashboard/dashboard.action';
@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class CustomerPartnerCorrespondenceDetailsComponent implements OnInit {
   @Input() parentForm: FormGroup;
-
+  @Output() searchPostcode:EventEmitter<any> = new EventEmitter<any>();
 
   accordionsAreDisabled = false;
   constructor() { }
@@ -18,7 +18,8 @@ export class CustomerPartnerCorrespondenceDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchPostCode($event){
+  onSearchPostCode($event){
+    this.searchPostcode.emit(this.parentForm.controls.clientPostcode.value);
     // this.store.dispatch(new GET_POSTCODE_INFO(this.parentForm.controls.clientPostcode.value)).subscribe( state => {
     //   const postCodeInfo = state.DashboardState.postCodeInfo;
     //   this.parentForm.controls.clientCity.setValue(postCodeInfo.city);

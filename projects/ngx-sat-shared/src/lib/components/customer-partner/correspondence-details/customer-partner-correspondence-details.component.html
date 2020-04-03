@@ -41,7 +41,7 @@
         <div nxRow>
             <div nxCol="12,12,6">
                 <nx-formfield nxLabel="Postcode">
-                    <input nxInput formControlName="clientPostcode" (keyup.enter)="searchPostCode($event)">
+                    <input nxInput formControlName="clientPostcode" (keyup.enter)="onSearchPostCode($event)">
 
                     <!-- <nx-error nxFormfieldError>
                         {{ 'NCN.STEP3.CD.ERR_POSTCODE' | translate }}
@@ -84,7 +84,7 @@
         <div class="std-mg-bottom-m">
             <nx-radio-group name="clientAddressType" formControlName="clientAddressType" class="std-radio-group std-mg-bottom-m">
                 <!-- <nx-label>{{ 'NCN.STEP3.CD.TYPE' | translate }}</nx-label> -->
-                <!-- <nx-label>Residence Type</nx-label> -->
+                <h2 class="nx-margin-left-m">Residence Type</h2>
                 <nx-radio nxValue="R" class="std-radio-button">Residential</nx-radio>
                 <nx-radio nxValue="NR" class="std-radio-button">Non-residential</nx-radio>
             </nx-radio-group>

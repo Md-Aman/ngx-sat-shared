@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-// import { Store, Select } from '@ngxs/store';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 // import { NCNBasePage } from 'src/app/shared/classes/ncn.base';
@@ -53,35 +52,34 @@ export class CustomerPartnerComponent{
   // @Select(DashboardState.clientMobileCode1List) clientMobileCode1List$;
   // @Select(DashboardState.clientPhoneCodeList) clientPhoneCodeList$;
 
-  CPFound = {
-    clientName: "Lee Chong Wei",
-    idValue: "740101010101",
-    nationality: "Malaysian",
-    gender: "Male",
-    marriedStatus: "Married",
-    mobilePhone: "010-1234567",
-    email: "lee@gmail.com",
-    address: "32, Jalan Indah, Taman Bahagia 60000 Kuala Lumpur",
-    fixLine: "06-3145784",
-    faxNumber: "NA"
-  };
+  @Input() dataSearch;
+  @Input() dataStore;
+  @Input() isCustomerPartnerFound;
+  @Input() isCustomerPartnerNotFound;
+  @Input() isIncompleteCustomerPartnerFound;
+  @Input() isShowSearchComponent;
+  @Input() stateList = [];
+  @Input() countryList = [];
+  @Input() clientFaxCodeList = [];
+  @Input() clientMobileCodeList = [];
+  @Input() clientPhoneCodeList = [];
 
-  stateList = [];
-  countryList = [];
-  clientFaxCodeList = [];
-  clientMobileCodeList = [];
-  clientPhoneCodeList = [];
+  @Output() setAction:EventEmitter<any> = new EventEmitter<any>();
 
   constructor(public route: ActivatedRoute, public router: Router) {
 
   }
 
-  searchAgain($event) {
-    // this.store.dispatch(new SHOW_SEARCH_COMPONENT_3(true));
-    // this.store.dispatch(new RESET_STORE_3());
+  onSetAction(action, data) {
+    this.setAction.emit({action: action, data: data});
   }
 
-  onSearch($event) {
+  // searchAgain($event) {
+    // this.store.dispatch(new SHOW_SEARCH_COMPONENT_3(true));
+    // this.store.dispatch(new RESET_STORE_3());
+  // }
+
+  // onSearch($event) {
     // const agentInfo = this.store.selectSnapshot<STEP1.DataStore>(state => state.NCNState.ncn.step1);
     // const params: STEP3.SearchQuery = {
     //   idType: $event.idType1,
@@ -90,19 +88,19 @@ export class CustomerPartnerComponent{
     // }
     // this.store.dispatch(new STORE_STEP3_SEARCH($event));
     // this.store.dispatch(new GET_CUSTOMER_PARTNER(params));
-  }
+  // }
 
-  onCreatedCustomerPartner($event) {
-    const params = this.buildQuery($event);
+  // onCreatedCustomerPartner($event) {
+  //   const params = this.buildQuery($event);
     // this.store.dispatch(new STORE_STEP3(params));
-  }
+  // }
 
-  onUpdatedCustomerPartner($event) {
-    const params = this.buildQuery($event, true);
+  // onUpdatedCustomerPartner($event) {
+  //   const params = this.buildQuery($event, true);
     // this.store.dispatch(new STORE_STEP3(params));
-  }
+  // }
 
-  buildQuery(dataObject, isUpdate: boolean = false) {
+  // buildQuery(dataObject, isUpdate: boolean = false) {
     // const dataSearch = this.store.selectSnapshot<STEP3.SearchDataStore>(state => state.NCNState.ncn.step3.search);
     // const agentInfo = this.store.selectSnapshot<STEP1.DataStore>(state => state.NCNState.ncn.step1);
     // const initQuery = fn.pipe(
@@ -113,18 +111,6 @@ export class CustomerPartnerComponent{
     // );
 
     // return initQuery({updateCustomerPartner: isUpdate});
-  }
+  // }
 
-  nextPage() {
-    // const dataObject = this.store.selectSnapshot<STEP3.ResponseData>(state => state.NCNState.step3);
-    // const agentInfo = this.store.selectSnapshot<STEP1.DataStore>(state => state.NCNState.ncn.step1);
-    // const initQuery = fn.pipe(buildExistingData(dataObject));
-    // const params = initQuery({});
-    // if(dataObject) {
-    //   this.store.dispatch(new STORE_STEP3(params));
-    // } else {
-    //   const userId = this.store.selectSnapshot<string>(state=> state.UserState.user.userId);
-    //   this.store.dispatch(new CREATE_CUSTOMER_PARTNER(userId));
-    // }
-  }
 }

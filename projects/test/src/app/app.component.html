@@ -20,3 +20,18 @@
 </div>
 
 <lib-table></lib-table>
+
+<customer-partner
+[dataSearch]="CPFound"
+[dataStore]="CPFound"
+isCustomerPartnerFound="false"
+isCustomerPartnerNotFound="true"
+isIncompleteCustomerPartnerFound="false"
+isShowSearchComponent="false"
+[stateList]=""
+[countryList]=""
+[clientFaxCodeList]=""
+[clientMobileCodeList]=""
+[clientPhoneCodeList]=""
+(setAction)="onSetAction($event)">
+</customer-partner>

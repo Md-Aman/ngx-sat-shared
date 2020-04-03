@@ -13,20 +13,21 @@
     </p>
 </div>
 
-<!-- <ng-container>
-    <customer-partner-customer-search (search)="onSearch($event)">
+<ng-container *ngIf="isShowSearchComponent">
+    <customer-partner-customer-search (search)="onSetAction('Search', $event)">
     </customer-partner-customer-search>
-</ng-container> -->
+</ng-container>
 
-<!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerNotFound$ | async)"> -->
-<ng-container>
+<ng-container *ngIf="!isShowSearchComponent && isCustomerPartnerNotFound">
     <customer-partner-customer-not-found
-        [source]="CPFound"
+        [datastore]="dataStore"
+        [dataSearch]="dataSearch"
         [faxList]="clientFaxCodeList" 
         [mobileCode]="clientMobileCodeList"
         [flCode]="clientPhoneCodeList" 
-        (completed)="onCreatedCustomerPartner($event)" 
-        (searchAgain)="searchAgain($event)">
+        (completed)="onSetAction('CreateCustomerPartner', $event)" 
+        (searchAgain)="onSetAction('SearchAgain', $event)"
+        (searchPostcode)="onSetAction('SearchPostcode', $event)">
         <h2 title>
             <!-- {{ 'NCN.STEP3.NOT_FOUND' | translate: {'object': 'Customer'} }} -->
             Customer Not Found
@@ -34,32 +35,30 @@
     </customer-partner-customer-not-found>
 </ng-container>
 
-<!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (isCustomerPartnerFound$ | async)"> -->
-<!-- <ng-container>
+<ng-container *ngIf="!isShowSearchComponent && isCustomerPartnerFound">
     <customer-partner-customer-found 
-        [source]="CPFound"
-        (searchAgain)="searchAgain($event)">
-        <b title> -->
+        [source]="dataSearch"
+        (searchAgain)="onSetAction('SearchAgain', $event)">
+        <b title>
             <!-- {{ 'NCN.STEP3.FOUND' | translate: {'object': 'Customer'} }} -->
-            <!-- Customer Found
+            Customer Found
         </b>
     </customer-partner-customer-found>
-</ng-container> -->
+</ng-container>
 
-<!-- <ng-container *ngIf="!(showSearchComponent$ | async) && (incompletedUser$ | async)"> -->
-<!-- <ng-container>
+<ng-container *ngIf="!isShowSearchComponent && isIncompleteCustomerPartnerFound">
     <customer-partner-incomplete-customer-found
-        [source]="CPFound" 
+        [source]="dataSearch" 
         [states]="stateList" 
         [countries]="countryList"
         [faxList]="clientFaxCodeList" 
         [mobileCode]="clientMobileCodeList"
         [flCode]="clientPhoneCodeList"
-        (completed)="onUpdatedCustomerPartner($event)" 
-        (searchAgain)="searchAgain($event)">
-        <b title> -->
+        (completed)="onSetAction('UpdateCustomerPartner', $event)" 
+        (searchAgain)="onSetAction('SearchAgain', $event)">
+        <b title>
             <!-- {{ 'NCN.STEP3.FOUND' | translate: {'object': 'Customer'} }} -->
-            <!-- Incomplete Customer Found
+            Incomplete Customer Found
         </b>
     </customer-partner-incomplete-customer-found>
-</ng-container> -->
+</ng-container>

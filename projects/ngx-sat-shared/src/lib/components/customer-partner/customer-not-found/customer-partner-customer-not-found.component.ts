@@ -12,13 +12,14 @@ import { debounceTime, map, takeUntil } from 'rxjs/operators';
   styleUrls: ['./customer-partner-customer-not-found.component.scss']
 })
 export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestroy {
-  @Input() source;
-  // @Input() dataSearch: STEP3.SearchDataStore;
+  @Input() datastore;
+  @Input() dataSearch;
   @Input() faxList;
   @Input() mobileCode;
   @Input() flCode;
   @Output() completed = new EventEmitter();
-  @Output() searchAgain:EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() searchPostcode = new EventEmitter();
+  @Output() searchAgain:EventEmitter<boolean> = new EventEmitter<boolean>();  
 
   // getCountry = CONSTANTS.getCountry();
   // getLabel = CONSTANTS.getIdLabel();
@@ -38,17 +39,17 @@ export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestr
     this.onFormChange();
   }
 
-  // get nationality() {
-  //   return this.getCountry(this.dataSearch.clientAddressType);
-  // }
+  get nationality() {
+    return this.dataSearch.nationality;
+  }
 
   // get idLabel() {
   //   return this.getLabel(this.dataSearch.idType1);
   // }
 
-  // get idValue() {
-  //   return this.dataSearch.idValue1;
-  // }
+  get idValue() {
+    return this.dataSearch.idValue;
+  }
 
   initForm() {
     this.customerInfoForm = this.fb.group({
@@ -107,6 +108,10 @@ export class CustomerPartnerCustomerNotFoundComponent implements OnInit, OnDestr
 
   restartSearch() {
     this.searchAgain.emit(true);
+  }
+
+  onSearchPostcode(value){
+    this.searchPostcode.emit(value);
   }
 
   ngOnDestroy() {

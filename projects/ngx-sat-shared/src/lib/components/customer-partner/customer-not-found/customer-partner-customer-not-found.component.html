@@ -22,7 +22,7 @@
                 </th>
 
                 <td class="data-value-table">
-                    {{ source.nationality }}
+                    {{ nationality }}
                 </td>
             </tr>
 
@@ -33,7 +33,7 @@
                 </th>
 
                 <td class="data-value-table">
-                    {{ source.idValue }}
+                    {{ idValue }}
                 </td>
             </tr>
         </tbody>
@@ -71,6 +71,7 @@
 
         <nx-radio-group name="clientGender" formControlName="clientGender" class="std-radio-group">
             <!-- <nx-label>{{ 'NCN.STEP3.CD.GENDER' | translate }}</nx-label> -->
+            <h2 class="nx-margin-left-m">Gender</h2>
             <nx-radio nxValue="1" class="std-radio-button">Male</nx-radio>
             <nx-radio nxValue="2" class="std-radio-button">Female</nx-radio>
         </nx-radio-group>
@@ -78,6 +79,7 @@
         <div class="std-mg-top-m std-mg-bottom-m std-mg-top-md-2m">
             <nx-radio-group name="clientMaritalStatus" formControlName="clientMaritalStatus" class="std-radio-group">
                 <!-- <nx-label>{{ 'NCN.STEP3.CD.MARITAL' | translate }}</nx-label> -->
+                <h2 class="nx-margin-left-m">Marital Status</h2>
                 <nx-radio nxValue="1" class="std-radio-button">Single</nx-radio>
                 <nx-radio nxValue="2" class="std-radio-button">Married</nx-radio>
                 <nx-radio nxValue="3" class="std-radio-button">Divorced / Widowed</nx-radio>
@@ -96,7 +98,10 @@
 
     <hr class="std-mg-bottom-m std-mg-bottom-md-3m std-mg-top-xs std-mg-top-md-m   hide-for-mobile">
 
-    <customer-partner-correspondence-details [parentForm]="customerInfoForm"></customer-partner-correspondence-details>
+    <customer-partner-correspondence-details 
+    [parentForm]="customerInfoForm"
+    (searchPostcode)="onSearchPostcode($event)">
+    </customer-partner-correspondence-details>
 </form>
 
 <br>

@@ -10,9 +10,7 @@ import { CustomerPartnerBase } from '../../../classes/customer-partner.base';
   templateUrl: './customer-partner-customer-found.component.html',
   styleUrls: ['./customer-partner-customer-found.component.scss']
 })
-export class CustomerPartnerCustomerFoundComponent extends CustomerPartnerBase{
-  @Input() source;
-
+export class CustomerPartnerCustomerFoundComponent extends CustomerPartnerBase{  
   @Output() searchAgain:EventEmitter<boolean> = new EventEmitter<boolean>();
 
   // customerInfoForm: FormGroup = this.fb.group({
