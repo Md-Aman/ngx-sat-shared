@@ -11,6 +11,7 @@ import { NxIconModule } from '@allianz/ngx-ndbx/icon';
 import { NxLinkModule } from '@allianz/ngx-ndbx/link';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
 import { NgxSatSharedModule } from 'projects/ngx-sat-shared/src/lib/ngx-sat-shared.module';
+import { TableModule } from 'projects/ngx-sat-shared/src/lib/table/table/table.module';
 
 import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
 import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';
@@ -26,6 +27,7 @@ import { NxGridModule } from '@allianz/ngx-ndbx/grid';
     BrowserModule,
     AppRoutingModule,
     NgxSatSharedModule,
+    TableModule,
     NxButtonModule,
     ExternalScrollbarModule,
     NxIconModule,

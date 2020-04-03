@@ -22,6 +22,7 @@ import { NxRadioModule } from '@allianz/ngx-ndbx/radio-button';
 import { NxRadioToggleModule } from '@allianz/ngx-ndbx/radio-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 import { NxButtonModule } from '@allianz/ngx-ndbx/button';
 import { ExternalScrollbarModule } from './modules/external-scrollbar/external-scrollbar.module';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
@@ -68,7 +69,6 @@ import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
     NxPaginationModule,
     NxFormfieldModule,
     NxDropdownModule,
-    ReactiveFormsModule,
     NxGridModule,
     NxRadioToggleModule
   ],
