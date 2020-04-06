@@ -10,6 +10,8 @@ export class AppComponent {
   perPage: number = 2;
   dataLength: number = 4;
   itemsPerPageSelections = [2, 5, 10, 20, 50, 100];
+  isTrue: boolean = true;
+  isFalse: boolean = false;
 
   CPFound = {
     clientName: "Lee Chong Wei",
