@@ -1,4 +1,17 @@
-
+<customer-partner
+[dataSearch]="CPFound"
+[dataStore]="CPFound"
+isCustomerPartnerFound="false"
+isCustomerPartnerNotFound="true"
+isIncompleteCustomerPartnerFound="false"
+isShowSearchComponent="false"
+[stateList]=""
+[countryList]=""
+[clientFaxCodeList]=""
+[clientMobileCodeList]=""
+[clientPhoneCodeList]=""
+(setAction)="onSetAction($event)">
+</customer-partner>
 <router-outlet></router-outlet>
 <div style="flex: 1 1 auto;">
     <div class="container">
@@ -19,19 +32,3 @@
     </div>
 </div>
 
-<lib-table></lib-table>
-
-<customer-partner
-[dataSearch]="CPFound"
-[dataStore]="CPFound"
-isCustomerPartnerFound="false"
-isCustomerPartnerNotFound="true"
-isIncompleteCustomerPartnerFound="false"
-isShowSearchComponent="false"
-[stateList]=""
-[countryList]=""
-[clientFaxCodeList]=""
-[clientMobileCodeList]=""
-[clientPhoneCodeList]=""
-(setAction)="onSetAction($event)">
-</customer-partner>

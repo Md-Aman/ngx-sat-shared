@@ -11,13 +11,14 @@ import { NxIconModule } from '@allianz/ngx-ndbx/icon';
 import { NxLinkModule } from '@allianz/ngx-ndbx/link';
 import { NxTableModule } from '@allianz/ngx-ndbx/table';
 import { NgxSatSharedModule } from 'projects/ngx-sat-shared/src/lib/ngx-sat-shared.module';
-import { TableModule } from 'projects/ngx-sat-shared/src/lib/table/table/table.module';
+import { TableModule } from 'projects/ngx-sat-shared/src/lib/table/table.module';
 
 import { NxPaginationModule } from '@allianz/ngx-ndbx/pagination';
 import { NxFormfieldModule } from '@allianz/ngx-ndbx/formfield';
 import { NxDropdownModule } from '@allianz/ngx-ndbx/dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NxGridModule } from '@allianz/ngx-ndbx/grid';
+import { PaginationModule } from 'projects/ngx-sat-shared/src/public-api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { NxGridModule } from '@allianz/ngx-ndbx/grid';
     NxPaginationModule, 
     NxDropdownModule,
     ReactiveFormsModule,
-    NxGridModule
+    NxGridModule,
+    PaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, HostListener, Input, ElementRef, ViewChild, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { SyncScrollService } from './../sync-scroll/sync-scroll.service';
+import { SyncScrollService } from '../sync-scroll/sync-scroll.service';
 
 @Component({
     selector: 'external-scrollbar',

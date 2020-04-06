@@ -6,6 +6,7 @@ import { fromEvent } from 'rxjs';
 import { throttleTime, debounceTime } from 'rxjs/operators';
 import { TestComponent } from '../test/test.component';
 import { NgxSatSharedService } from '../../ngx-sat-shared.service';
+import { TableService } from '../table.service';
 // import { FixedTablePage } from 'projects/test/src/app/shared/fixed-table-page.class';
 @Component({
   selector: 'lib-scroll-able-table',
@@ -29,8 +30,8 @@ export class ScrollAbleTableComponent extends TestComponent implements OnInit {
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private ngZone: NgZone,
-    private siteHeaderService: NgxSatSharedService) {
-    super(ngZone, changeDetectorRef, siteHeaderService);
+    private tableService: TableService) {
+    super(ngZone, changeDetectorRef, tableService);
     this.adaptTopScrollbar();
   }
 

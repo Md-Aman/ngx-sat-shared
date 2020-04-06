@@ -16,7 +16,7 @@ import { throttleTime, debounceTime } from 'rxjs/operators';
 // NDBX
 import { NxSortHeaderComponent } from '@allianz/ngx-ndbx/table';
 import { SortEvent } from '@allianz/ngx-ndbx/table/public-api';
-import { NgxSatSharedService } from '../../ngx-sat-shared.service';
+import { TableService } from '../table.service';
 // import { SiteHeaderService } from 'projects/test/src/app/shared/services/site-header.service';
 // import { SiteHeaderService } from 'projects/test/src/app/shared/services/site-header.service';
 // import { SiteHeaderService } from 'src/app/site-header/site-header.service';
@@ -93,7 +93,7 @@ export class TestComponent implements AfterViewInit, OnDestroy {
   constructor(
       private fixedTablePage__ngZone:NgZone,
       private fixedTablePage__changeDetectorRef:ChangeDetectorRef,
-      private fixedTablePage__siteHeaderService:NgxSatSharedService
+      private fixedTablePage__siteHeaderService:TableService
   ) {
       fixedTablePage__ngZone.runOutsideAngular(() => {
           this.debouncedScrollEvent = fromEvent(window, 'scroll')
